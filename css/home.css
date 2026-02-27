@@ -252,3 +252,9 @@
   object-fit: cover;
   display: block;
 }
+
+#contact h2 {
+  font-size: 56px;      /* hoặc 36px, 40px tuỳ bạn */
+  letter-spacing: 2px;  /* cho nó “điện ảnh” hơn một chút */
+  text-transform: uppercase;
+}

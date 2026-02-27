@@ -63,7 +63,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("../assets/hero.jpg") center/cover no-repeat; /* đổi đường dẫn nếu cần */
+  background: url("../assets/home-hero.jpg") center/cover no-repeat; /* đổi đường dẫn nếu cần */
   display: flex;
   align-items: center;
   justify-content: center;
