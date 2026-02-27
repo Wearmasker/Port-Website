@@ -1,0 +1,145 @@
+/* ===== SOUND PORTFOLIO PAGE ===== */
+
+/* ===== QUOTE Ở TRANG PERSONAL PROJECTS ===== */
+
+.quote-section {
+  background: #000;          /* giữ nền đen cho đồng bộ */
+  text-align: center;        /* căn giữa toàn bộ nội dung */
+}
+
+/* dấu ngoặc kép phía trên */
+.quote-mark {
+  font-size: 40px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* phần câu quote chính */
+.quote-text {
+  font-size: 24px;
+  line-height: 1.6;
+  max-width: 780px;          /* không cho text chạy dài hết màn hình */
+  margin: 0 auto 16px;       /* căn giữa + cách dưới 16px */
+}
+
+/* tên tác giả */
+.quote-author {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+/* dòng giới thiệu bên dưới */
+.personal-intro {
+  font-size: 13px;
+  max-width: 820px;
+  margin: 0 auto;           /* căn giữa luôn */
+  line-height: 1.7;
+}
+
+/* responsive cho màn nhỏ */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 20px;
+  }
+}
+
+/* đường kẻ mỏng dưới đoạn text */
+.section-divider {
+  height: 1px;
+  background: #222;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+/* Professional Highlights */
+.portfolio-section {
+  text-align: center;
+  background: #000;
+}
+
+.portfolio-heading {
+  font-size: 52px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.portfolio-subtitle {
+  font-size: 14px;
+  max-width: 720px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+/* video nằm giữa, rộng vừa phải */
+.portfolio-embed {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 20px;
+  }
+
+  .portfolio-heading {
+    font-size: 36px;
+  }
+}
+
+/* ===== PROJECT GRID TRONG SOUND PORTFOLIO ===== */
+
+.projects-section {
+  background: #000;
+}
+
+/* 2 cột: trái & phải */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 40px;            /* hàng, cột */
+}
+
+/* mỗi project */
+.project-title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.project-text {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* media: dùng lại .embed cho video, hoặc ảnh thường */
+.project-media {
+  background: #111;
+}
+
+.project-media img {
+  width: 100%;
+  display: block;
+}
+
+/* cho embed trong grid hẹp lại một chút */
+.projects-section .embed {
+  padding-top: 56.25%;   /* vẫn 16:9 */
+}
+
+/* mobile: xuống 1 cột */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav a.is-active {
+  opacity: 1;
+  border-bottom: 2px solid #f5a623; /* màu cam hoặc màu bạn đang dùng */
+  padding-bottom: 2px;
+}

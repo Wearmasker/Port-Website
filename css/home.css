@@ -1,0 +1,254 @@
+/* ===== REEL SECTION ===== */
+
+#reel {
+  text-align: center;
+}
+
+.reel-block {
+  margin-bottom: 96px;
+}
+
+.reel-title {
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.reel-subtitle {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bcbcbc;
+  margin-bottom: 32px;
+}
+
+#reel .embed {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ===== BIO SECTION ===== */
+.bio-section {
+  border-top: 1px solid #222;
+  background: #000;
+}
+
+.bio-heading {
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+/* layout 2 cột: chữ trái, hình phải */
+.bio-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.bio-text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* cột hình bên phải */
+.bio-images {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Ô đen dưới ảnh, không overlay nữa */
+/* caption bình thường (dưới ảnh) */
+.bio-caption {
+  position: static;
+  background: #000;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 8px;
+  max-width: 100%;
+}
+
+/* figure phải relative để caption có thể overlay */
+.bio-figure {
+  position: relative;
+  margin: 0 0 32px;
+}
+
+.bio-figure img {
+  width: 100%;
+  display: block;
+}
+
+/* caption kiểu overlay bên phải, giống ảnh 2 */
+.bio-caption--right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 40%;              /* độ rộng block đen, chỉnh theo ý */
+  margin-top: 0;           /* bỏ margin-top của dạng thường */
+}
+
+
+/* responsive mobile: xuống 1 cột */
+@media (max-width: 768px) {
+  .bio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-caption {
+    position: static;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+}
+
+
+/* ===== FAVORITES / HOBBIES SECTION ===== */
+.favorites-section {
+  border-top: 1px solid #222;
+  background: #000;
+}
+
+.favorites-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1.2fr;
+  gap: 48px;
+}
+
+.favorites-col {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.favorites-heading {
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.favorites-list {
+  list-style: disc;
+  margin-left: 22px;
+}
+
+.favorites-list li + li {
+  margin-top: 8px;
+}
+
+.favorites-names {
+  margin-bottom: 32px;
+}
+
+/* Hình + ô chữ đen bên phải */
+.favorites-figure {
+  position: relative;
+  margin: 0;
+}
+
+.favorites-figure img {
+  width: 100%;
+  display: block;
+}
+
+.favorites-caption {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 40%;
+  background: #000;
+  color: #fff;
+  padding: 18px 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+  .favorites-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-caption {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* ===== HOME: 3 LINK CARD CUỐI TRANG ===== */
+
+.home-links {
+  background: #000;
+}
+
+.home-links-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* mỗi card là 1 <a> */
+.home-card {
+  position: relative;
+  width: 360px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.home-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* chữ ở giữa ảnh */
+.home-card-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* hover hiệu ứng zoom nhẹ */
+.home-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* card links cuối trang */
+.home-card {
+  position: relative;
+  width: 360px;       /* => chỉnh nhỏ xuống nếu muốn */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.home-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

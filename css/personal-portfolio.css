@@ -1,0 +1,111 @@
+/* ===== PERSONAL PROJECTS PAGE – LIST ===== */
+/* ===== QUOTE Ở TRANG PERSONAL PROJECTS ===== */
+
+.quote-section {
+  background: #000;          /* giữ nền đen cho đồng bộ */
+  text-align: center;        /* căn giữa toàn bộ nội dung */
+}
+
+/* dấu ngoặc kép phía trên */
+.quote-mark {
+  font-size: 40px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* phần câu quote chính */
+.quote-text {
+  font-size: 24px;
+  line-height: 1.6;
+  max-width: 780px;          /* không cho text chạy dài hết màn hình */
+  margin: 0 auto 16px;       /* căn giữa + cách dưới 16px */
+}
+
+/* tên tác giả */
+.quote-author {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+/* dòng giới thiệu bên dưới */
+.personal-intro {
+  font-size: 13px;
+  max-width: 820px;
+  margin: 0 auto;           /* căn giữa luôn */
+  line-height: 1.7;
+}
+
+/* responsive cho màn nhỏ */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 20px;
+  }
+}
+
+
+.personal-section {
+  background: #000;
+}
+
+/* heading lớn kiểu screenshot */
+.personal-heading {
+  text-align: center;
+  font-size: 52px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.personal-heading span {
+  display: block;
+  font-size: 32px;
+}
+
+/* mỗi block project */
+.personal-project {
+  max-width: 960px;
+  margin: 0 auto 72px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.personal-title {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.personal-text {
+  margin-bottom: 10px;
+}
+
+.personal-subheading {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.personal-meta {
+  font-size: 13px;
+  margin: 14px 0 8px;
+}
+
+/* video rộng vừa và căn giữa */
+.personal-embed {
+  max-width: 960px;
+  margin: 16px auto 40px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .personal-heading {
+    font-size: 36px;
+  }
+
+  .personal-heading span {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  background: #000;
+  color: #fff;
+}
+
+/* CONTAINER CHUNG */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* HEADER + NAV TRÊN NỀN ẢNH */
+.header {
+  position: fixed;           /* luôn dính trên cùng */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;   /* trong suốt, thấy ảnh hero phía sau */
+  z-index: 100;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.85;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO FULL MÀN HÌNH */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../assets/hero.jpg") center/cover no-repeat; /* đổi đường dẫn nếu cần */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* hero trang sound portfolio */
+.hero-sound {
+  background: url("../assets/sound-hero.jpg") center/cover no-repeat;
+}
+
+/* LỚP LỌC TỐI */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* NỘI DUNG CHỮ TRONG HERO */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0.85;
+}
+
+/* CÁC SECTION PHÍA DƯỚI */
+main {
+  margin-top: 0;
+}
+
+.section {
+  padding: 64px 0;
+  border-top: 1px solid #222;
+  background: #000;
+}
+
+.section h2 {
+  margin-bottom: 16px;
+}
+
+/* NÚT */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* VIDEO EMBED */
+.embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px 0 60px;
+  border-top: 1px solid #222;
+  background: #000;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+/* hàng LINKEDIN – IMDB – SOUNDCLOUD */
+.footer-links {
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+.footer-links a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #888;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* 2 dòng bên dưới */
+.footer-copy,
+.footer-powered {
+  margin-bottom: 6px;
+}
