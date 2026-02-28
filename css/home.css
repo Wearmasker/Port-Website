@@ -44,23 +44,39 @@
 /* layout 2 cột: chữ trái, hình phải */
 .bio-layout {
   display: grid;
-  grid-template-columns: 2fr 1.5fr;
+  grid-template-columns: 3fr 2fr;   /* text rộng hơn ảnh */
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "text images"
+    "skills images";
   gap: 40px;
-  align-items: flex-start;
+  align-items: start;
 }
 
+/* gán từng khối vào khu vực */
 .bio-text {
+  grid-area: text;
   font-size: 15px;
   line-height: 1.7;
 }
 
-/* cột hình bên phải */
 .bio-images {
-  display: flex;
-  flex-direction: column;
+  grid-area: images;
+  /* nếu bạn có max-width cho ảnh thì giữ như cũ */
+}
+
+.skills-knowledge {
+  grid-area: skills;
+  margin-top: 8px;                 /* sát với paragraph hơn */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
 }
 
+.skills-col {
+  font-size: 14px;
+  line-height: 1.8;
+}
 /* Ô đen dưới ảnh, không overlay nữa */
 /* caption bình thường (dưới ảnh) */
 .bio-caption {
@@ -81,8 +97,10 @@
 }
 
 .bio-figure img {
+  max-width: 280px;    /* giới hạn tối đa 320px */
   width: 100%;
   display: block;
+  margin: 0 auto;
 }
 
 /* caption kiểu overlay bên phải, giống ảnh 2 */
@@ -128,7 +146,7 @@
 }
 
 .favorites-heading {
-  font-size: 56px;
+  font-size: 40px;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -257,4 +275,148 @@
   font-size: 56px;      /* hoặc 36px, 40px tuỳ bạn */
   letter-spacing: 2px;  /* cho nó “điện ảnh” hơn một chút */
   text-transform: uppercase;
+}
+
+/* ===== GALLERY INSPIRATIONAL SOUND DESIGNERS ===== */
+
+.designer-gallery {
+  margin-top: 24px;
+}
+
+/* container của các avatar */
+.designer-grid {
+  display: flex;
+  flex-wrap: wrap;        /* hết chỗ thì tự xuống dòng */
+  gap: 16px;              /* khoảng cách giữa các avatar */
+}
+
+/* mỗi avatar + tên là 1 ô nhỏ */
+.designer-item {
+  width: 90px;            /* hoặc 100px tuỳ bạn */
+  text-align: center;
+}
+
+/* ảnh avatar */
+.designer-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;     /* tròn, bỏ dòng này nếu muốn vuông */
+  display: block;
+}
+
+/* tên bên dưới (nếu muốn nhỏ hơn) */
+.designer-name {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+/* Ẩn các ảnh extra mặc định */
+.designer-extra {
+  display: none;
+}
+
+/* Khi gallery có class .show-all thì hiện các ảnh extra */
+.designer-gallery.show-all .designer-extra {
+  display: block;
+}
+
+/* Nút more */
+.designer-more {
+  margin-top: 12px;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.designer-more:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Mobile: 2 ảnh xếp dọc */
+@media (max-width: 700px) {
+  .designer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* link trong danh sách Favorite Sounds */
+.favorites-list a {
+  color: #ffae42;         /* màu cam/tuỳ chọn */
+  text-decoration: none;  /* bỏ gạch chân */
+  font-weight: 600;
+}
+
+.favorites-list a:hover {
+  text-decoration: underline;
+}
+
+/* Link trong phần ABOUT ME */
+#bio .bio-text a {
+  color: #ffae42;          /* màu vàng */
+  font-weight: 600;        /* hơi đậm */
+  text-decoration: none;   /* bỏ gạch chân nếu không thích */
+}
+
+/* Hover cho link */
+#bio .bio-text a:hover {
+  text-decoration: underline;  /* hoặc border-bottom nếu thích */
+}
+
+/* ===== SKILLS & KNOWLEDGE UNDER ABOUT ME ===== */
+
+.skills-knowledge {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.skills-col {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.skills-heading {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #d5e0d5;      /* hơi xanh nhạt kiểu hình mẫu, đổi nếu thích */
+}
+
+/* list không chấm, chỉ có gạch ngang ở đầu */
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 18px;   /* chừa chỗ cho gạch ngang */
+}
+
+.skills-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #9fb5a5;       /* màu gạch ngang */
+}
+
+/* mobile: xuống 1 cột */
+@media (max-width: 768px) {
+  .skills-knowledge {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
