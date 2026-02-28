@@ -116,17 +116,43 @@
 
 /* responsive mobile: xuống 1 cột */
 @media (max-width: 768px) {
+  /* layout Bio chuyển về 1 cột */
   .bio-layout {
-    grid-template-columns: 1fr;
+    display: block;           /* thay vì grid */
   }
 
-  .bio-caption {
-    position: static;
+  .bio-text {
+    margin-bottom: 24px;
+  }
+
+  /* skills nằm sau text, trước hình – vẫn ok */
+  .skills-knowledge {
+    margin-top: 24px;
+  }
+
+  .bio-images {
     max-width: 100%;
+  }
+
+  .bio-figure {
+    margin-bottom: 24px;
+  }
+
+  /* caption KHÔNG overlay nữa, xuống dưới ảnh */
+  .bio-caption,
+  .bio-caption--right {
+    position: static;
+    width: auto;
+    transform: none;
     margin-top: 8px;
+    max-width: 100%;
+  }
+
+  .bio-figure img {
+    width: 100%;
+    height: auto;
   }
 }
-
 
 /* ===== FAVORITES / HOBBIES SECTION ===== */
 .favorites-section {
