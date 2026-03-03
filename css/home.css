@@ -125,10 +125,23 @@
     margin-bottom: 24px;
   }
 
-  /* skills nằm sau text, trước hình – vẫn ok */
-  .skills-knowledge {
-    margin-top: 24px;
-  }
+.skills-knowledge ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-knowledge li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+
+.skills-knowledge li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #ffae42; /* hoặc màu bạn thích */
+}
 
   .bio-images {
     max-width: 100%;
