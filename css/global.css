@@ -8,12 +8,22 @@ html {
   scroll-behavior: smooth;
 }
 
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3); /* lớp tối phủ lên ảnh */
+  z-index: -1;
+}
 body {
-  margin: 0;
-  font-family: system-ui, Arial, sans-serif;
-  line-height: 1.5;
-  background: #000;
-  color: #fff;
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("../assets/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* CONTAINER CHUNG */
@@ -118,8 +128,8 @@ main {
 
 .section {
   padding: 64px 0;
-  border-top: 1px solid #222;
-  background: #000;
+  /*border-top: 1px solid #222;*/
+  /*background: #000;*/
 }
 
 .section h2 {
@@ -153,7 +163,7 @@ main {
 .footer {
   padding: 40px 0 60px;
   border-top: 1px solid #222;
-  background: #000;
+  /*background: #000;*/
   color: #ccc;
   font-size: 13px;
 }

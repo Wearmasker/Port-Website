@@ -31,7 +31,7 @@
 /* ===== BIO SECTION ===== */
 .bio-section {
   border-top: 1px solid #222;
-  background: #000;
+ /* background: #000;*/
 }
 
 .bio-heading {
@@ -81,7 +81,7 @@
 /* caption bình thường (dưới ảnh) */
 .bio-caption {
   position: static;
-  background: #000;
+  background: #a18787;
   color: #fff;
   padding: 12px 14px;
   font-size: 12px;
@@ -170,7 +170,7 @@
 /* ===== FAVORITES / HOBBIES SECTION ===== */
 .favorites-section {
   border-top: 1px solid #222;
-  background: #000;
+ /*  background: #000;*/
 }
 
 .favorites-layout {
@@ -221,7 +221,7 @@
   right: 0;
   transform: translateY(-50%);
   width: 40%;
-  background: #000;
+  /*background: #000;*/
   color: #fff;
   padding: 18px 20px;
   font-size: 13px;
@@ -245,7 +245,7 @@
 /* ===== HOME: 3 LINK CARD CUỐI TRANG ===== */
 
 .home-links {
-  background: #000;
+  /*background: #000;*/
 }
 
 .home-links-grid {
