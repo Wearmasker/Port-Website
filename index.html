@@ -90,10 +90,7 @@
               I got into game audio because I’ve always
               loved games and music, and I wanted to create worlds of my own, not just the
               story and mechanics, but the feeling behind every moment. While studying
-              <a href="https://www.saxion.nl/opleidingen/en/fulltime/bachelor/creative-media-and-game-technologies?gad_source=1&gad_campaignid=1183906535&gbraid=0AAAAADClXjB6tOLaZYWfnHaWaXg20POQZ&gclid=CjwKCAiAnoXNBhAZEiwAnItcGx1POzqsTR-56dR6oqSwLh8uFQUPk8zDfxOkAw5Ff_HIIRroYIQO_RoC2ukQAvD_BwE"
-                target="_blank">
-                Creative Media and Game Technologies
-              </a>
+              <button type="button" class="info-link" data-popup="cmgt">Creative Media and Game Technologies</button>
               , I’ve been learning game design and
               sound design hands-on, and also teaching myself coding and music theory
               along the way. I enjoy iterating fast, asking for feedback, and polishing
@@ -102,13 +99,11 @@
             <p>
               My work often involves synth design, audio implementation,
               and creating full soundscapes, using
-              <a href="https://www.ableton.com/en/" target="_blank">
-                Ableton Live
-              </a>,
-              <a href="https://www.ableton.com/en/" target="_blank">
-                Serum 2
-              </a>, FMOD, and Unity.
-              I’ve worked as a sound design intern at Gamelab Oost, and I was the
+              <button type="button" class="info-link" data-popup="ableton">Ableton Live</button>,
+              <button type="button" class="info-link" data-popup="serum">Serum 2</button>,
+              <button type="button" class="info-link" data-popup="fmod">FMOD</button>, and
+              <button type="button" class="info-link" data-popup="unity">Unity</button>.
+              I've worked as a sound design intern at <button type="button" class="info-link" data-popup="gamelab">Gamelab Oost</button>, and I was the
               sound designer for Viral Impact, a client project for 's Heeren Loo
               (supporting people with Mild Intellectual Disability). For that game, I created
               the music, ambience, and SFX in Ableton, then implemented and scripted the audio
@@ -310,6 +305,21 @@ I'm also a big fan of Futzbox, RX7, FabFilter Pro Q, and anything doppler-relate
   </main>
 
 
+  <!-- ===== INFO POPUP (reused by every .info-link button) ===== -->
+  <div class="popup-overlay" id="infoPopup" hidden>
+    <div class="popup-modal" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <button type="button" class="popup-close" aria-label="Close popup">&times;</button>
+
+      <div class="popup-text">
+        <h3 id="popupTitle"></h3>
+        <p id="popupBody"></p>
+      </div>
+
+      <div class="popup-image">
+        <img id="popupImg" src="" alt="">
+      </div>
+    </div>
+  </div>
 
 
   <footer class="footer">
