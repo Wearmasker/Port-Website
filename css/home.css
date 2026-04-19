@@ -459,3 +459,160 @@
     gap: 24px;
   }
 }
+
+
+/* =====================================================
+   INFO-LINK BUTTONS (replacing <a> in About Me)
+   ===================================================== */
+
+/* Button styled to look like the previous orange link */
+.info-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: 600;
+  color: #ffae42;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.info-link:hover,
+.info-link:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+
+/* =====================================================
+   POPUP MODAL (shared by all .info-link buttons)
+   ===================================================== */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: popupOverlayFade 0.2s ease;
+}
+
+.popup-overlay[hidden] {
+  display: none;
+}
+
+@keyframes popupOverlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(900px, 100%);
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: popupModalIn 0.25s ease;
+}
+
+@keyframes popupModalIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* LEFT: text */
+.popup-text {
+  padding: 48px 40px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.popup-text h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.popup-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* RIGHT: image */
+.popup-image {
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* X close button (top-right) */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.popup-close:hover {
+  background: #fff;
+  transform: scale(1.08);
+}
+
+/* Mobile: stack image on top, text below */
+@media (max-width: 700px) {
+  .popup-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto;
+    max-height: 90vh;
+  }
+
+  .popup-image {
+    order: -1;
+  }
+
+  .popup-text {
+    padding: 24px 20px 28px;
+  }
+
+  .popup-text h3 {
+    font-size: 20px;
+  }
+
+  .popup-text p {
+    font-size: 14px;
+  }
+}
