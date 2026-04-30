@@ -5,6 +5,38 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+// ===========================================================
+//  EMAIL REVEAL — assemble email only on user click
+//  so the address never appears in the page source.
+// ===========================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const emailBtn = document.getElementById("emailReveal");
+  if (emailBtn) {
+    emailBtn.addEventListener("click", () => {
+      const a = emailBtn.dataset.a;
+      const b = emailBtn.dataset.b;
+      const c = emailBtn.dataset.c;
+      if (!a || !b || !c) return;
+
+      const email = a + "@" + b + "." + c;
+
+      const link = document.createElement("a");
+      link.href = "mailto:" + email;
+      link.className = "contact-email-link";
+      link.setAttribute("aria-label", "Email " + email);
+
+      // Re-use the envelope SVG from the original button
+      const icon = emailBtn.querySelector("svg");
+      if (icon) link.appendChild(icon.cloneNode(true));
+
+      const text = document.createTextNode(email);
+      link.appendChild(text);
+
+      emailBtn.replaceWith(link);
+    });
+  }
+});
+
 // Toggle "More photos" cho gallery sound designers
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".designer-more");
@@ -121,3 +153,162 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && !popup.hidden) closePopup();
   });
 });
+
+
+// ==========================================================================
+//  SOUND LIBRARY — click-to-play audio list with category filtering
+// ==========================================================================
+(function () {
+  function init() {
+    const list = document.getElementById("libraryList");
+    if (!list) return;
+
+    const items = list.querySelectorAll(".library-item");
+    const filters = document.querySelectorAll(".library-chip");
+    const emptyEl = document.getElementById("libraryEmpty");
+
+    let audio = null;
+    let activeItem = null;
+
+    function clearActive() {
+      if (activeItem) {
+        activeItem.classList.remove("is-playing");
+        activeItem = null;
+      }
+      if (audio) {
+        audio.pause();
+        audio = null;
+      }
+    }
+
+    function playItem(item) {
+      // If clicking the currently playing item — toggle pause/stop
+      if (activeItem === item) {
+        clearActive();
+        return;
+      }
+
+      clearActive();
+
+      const src = item.dataset.src;
+      if (!src) return;
+
+      audio = new Audio(src);
+      audio.preload = "auto";
+
+      audio.addEventListener("ended", () => {
+        if (activeItem === item) clearActive();
+      });
+
+      audio.addEventListener("error", () => {
+        // File missing — gracefully reset state
+        clearActive();
+      });
+
+      audio.play().catch(() => {
+        clearActive();
+      });
+
+      item.classList.add("is-playing");
+      activeItem = item;
+    }
+
+    items.forEach((item) => {
+      const playBtn = item.querySelector(".library-play");
+      if (!playBtn) return;
+      playBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        playItem(item);
+      });
+    });
+
+    // FILTER LOGIC
+    function applyFilter(filter) {
+      let visibleCount = 0;
+      items.forEach((item) => {
+        const cat = item.dataset.category;
+        const matches = filter === "all" || cat === filter;
+        item.classList.toggle("is-hidden", !matches);
+        if (matches) visibleCount++;
+      });
+      if (emptyEl) emptyEl.hidden = visibleCount > 0;
+
+      // If the currently playing item gets filtered out, stop playback
+      if (activeItem && activeItem.classList.contains("is-hidden")) {
+        clearActive();
+      }
+    }
+
+    filters.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        filters.forEach((c) => {
+          c.classList.remove("is-active");
+          c.setAttribute("aria-selected", "false");
+        });
+        chip.classList.add("is-active");
+        chip.setAttribute("aria-selected", "true");
+        applyFilter(chip.dataset.filter);
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+
+// ==========================================================================
+//  SCROLL-REVEAL — fade each .section into view as it enters the viewport.
+//  Sections are visible by default; we add .reveal-ready (which hides them)
+//  only after JS confirms it can run. This keeps the site usable for any
+//  edge case where JS doesn't load.
+// ==========================================================================
+(function () {
+  // Honour user's reduced-motion preference — skip the whole effect
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  // IntersectionObserver isn't supported in very old browsers — fall back
+  // to "do nothing" so content stays visible.
+  if (!("IntersectionObserver" in window)) return;
+
+  function init() {
+    const sections = document.querySelectorAll(".section");
+    if (!sections.length) return;
+
+    // Hide them now that we know JS is running and the observer is supported
+    sections.forEach((s) => s.classList.add("reveal-ready"));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -40px 0px"
+    });
+
+    sections.forEach((s) => observer.observe(s));
+
+    // Safety net: after 1.5s, force-reveal anything still hidden
+    // (handles weird cases like sections taller than the viewport)
+    setTimeout(() => {
+      document.querySelectorAll(".section.reveal-ready:not(.is-visible)").forEach((s) => {
+        s.classList.add("is-visible");
+      });
+    }, 1500);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();

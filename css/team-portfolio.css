@@ -89,8 +89,22 @@
 }
 
 .personal-meta {
-  font-size: 13px;
-  margin: 14px 0 8px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f5a623;
+  margin: 6px 0 16px;
+}
+
+.personal-text a {
+  color: #f5a623;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.personal-text a:hover {
+  border-bottom-color: #f5a623;
 }
 
 /* video rộng vừa và căn giữa */
@@ -103,9 +117,42 @@
 @media (max-width: 768px) {
   .personal-heading {
     font-size: 36px;
+    letter-spacing: 2px;
   }
 
   .personal-heading span {
     font-size: 24px;
+  }
+
+  .personal-title {
+    font-size: 15px;
+  }
+
+  .personal-text {
+    font-size: 13px;
+  }
+
+  .personal-subheading {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  .personal-meta {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .personal-project {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-heading {
+    font-size: 28px;
+  }
+
+  .personal-heading span {
+    font-size: 18px;
   }
 }

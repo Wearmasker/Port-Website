@@ -125,24 +125,6 @@
     margin-bottom: 24px;
   }
 
-.skills-knowledge ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.skills-knowledge li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 8px;
-}
-
-.skills-knowledge li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: #ffae42; /* hoặc màu bạn thích */
-}
-
   .bio-images {
     max-width: 100%;
   }
@@ -249,20 +231,33 @@
 }
 
 .home-links-grid {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 /* mỗi card là 1 <a> */
 .home-card {
   position: relative;
-  width: 360px;
+  width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   text-decoration: none;
   border-radius: 4px;
+}
+
+/* tablet: 2 cards per row */
+@media (max-width: 900px) {
+  .home-links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* mobile: 1 card per row */
+@media (max-width: 600px) {
+  .home-links-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .home-card img {
@@ -293,11 +288,8 @@
   filter: brightness(0.8);
 }
 
-/* card links cuối trang */
+/* card links cuối trang (overrides above already set width/aspect) */
 .home-card {
-  position: relative;
-  width: 360px;       /* => chỉnh nhỏ xuống nếu muốn */
-  aspect-ratio: 16 / 9;
   overflow: hidden;
   text-decoration: none;
   border-radius: 4px;
@@ -310,10 +302,115 @@
   display: block;
 }
 
-#contact h2 {
-  font-size: 56px;      /* hoặc 36px, 40px tuỳ bạn */
-  letter-spacing: 2px;  /* cho nó “điện ảnh” hơn một chút */
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+.contact-heading {
+  font-size: 56px;
+  letter-spacing: 4px;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contact-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0 auto 36px;
+  color: #ccc;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Shared button base */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-btn-icon {
+  flex-shrink: 0;
+}
+
+/* Primary: LinkedIn — orange filled */
+.contact-btn--primary {
+  background: #f5a623;
+  color: #111;
+  border: 1px solid #f5a623;
+}
+
+.contact-btn--primary:hover {
+  background: #ffb944;
+  border-color: #ffb944;
+  transform: translateY(-2px);
+}
+
+/* Secondary: Email reveal — outlined */
+.contact-btn--secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.contact-btn--secondary:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+  transform: translateY(-2px);
+}
+
+/* Once email is revealed, replace button with a styled mailto link */
+.contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  color: #f5a623;
+  border: 1px solid #f5a623;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.contact-email-link:hover {
+  background: rgba(245, 166, 35, 0.1);
+}
+
+@media (max-width: 600px) {
+  .contact-heading {
+    font-size: 36px;
+  }
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-btn,
+  .contact-email-link {
+    justify-content: center;
+  }
 }
 
 /* ===== GALLERY INSPIRATIONAL SOUND DESIGNERS ===== */
@@ -457,6 +554,147 @@
   .skills-knowledge {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+}
+
+/* =====================================================
+   SKILLS / KNOWLEDGE — chip badges
+   Replaces the old bullet/dash list with clean chip badges.
+   ===================================================== */
+
+.skills h3,
+.knowledge h3 {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: #d5e0d5;
+}
+
+.skills ul,
+.knowledge ul,
+.skills-knowledge ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skills li,
+.knowledge li,
+.skills-knowledge li {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #ddd;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  /* Reset any leftover legacy styles */
+  position: static;
+  padding-left: 12px;
+  margin-bottom: 0;
+}
+
+.skills li::before,
+.knowledge li::before,
+.skills-knowledge li::before {
+  content: none;
+}
+
+.skills li:hover,
+.knowledge li:hover,
+.skills-knowledge li:hover {
+  border-color: rgba(245, 166, 35, 0.6);
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.06);
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   HOME PAGE — MOBILE BREAKPOINTS
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .reel-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  .reel-subtitle {
+    font-size: 11px;
+  }
+  .bio-heading {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .favorites-heading {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .favorites-col {
+    font-size: 14px;
+  }
+  .contact-heading {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  /* Designer avatars get a touch smaller and more even */
+  .designer-item,
+  .designer-img {
+    width: 80px;
+  }
+  .designer-img {
+    height: 80px;
+  }
+  .designer-name {
+    font-size: 10px;
+  }
+
+  /* Bio caption (the small dark strip beside images) becomes static on mobile */
+  .bio-caption,
+  .bio-caption--right {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  .bio-figure img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .reel-title {
+    font-size: 28px;
+  }
+  .bio-heading {
+    font-size: 28px;
+  }
+  .favorites-heading {
+    font-size: 22px;
+  }
+  .contact-heading {
+    font-size: 26px;
+  }
+  .home-card-title {
+    font-size: 18px;
+  }
+
+  /* Tighter chip badges on tiny screens */
+  .skills li,
+  .knowledge li,
+  .skills-knowledge li {
+    font-size: 11px;
+    padding: 5px 10px;
   }
 }
 

@@ -1,0 +1,417 @@
+/* ===== BLOG PAGES ===== */
+
+/* HERO REUSE — uses .hero from global.css; just override the background image */
+.hero-blog {
+  background: url("../assets/blog-hero.jpg") center/cover no-repeat;
+}
+
+.hero-post {
+  background: url("../assets/blog-hero.jpg") center/cover no-repeat;
+}
+
+/* Hero subtitle paragraph (under the H1 on blog index + post hero) */
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ===== BLOG INDEX (blog.html) ===== */
+
+.blog-list-section {
+  background: #000;
+}
+
+/* Card grid — same 2-col pattern as projects-grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #222;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.blog-card:hover {
+  border-color: #f5a623;
+  transform: translateY(-2px);
+}
+
+.blog-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.blog-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card-body {
+  padding: 24px 24px 28px;
+}
+
+.blog-card-meta {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.blog-card-title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.blog-card-excerpt {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.blog-card-cta {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5a623;
+}
+
+/* mobile: 1 column */
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== BLOG POST PAGE (blog/*.html) ===== */
+
+/* eyebrow above H1 in hero */
+.post-eyebrow {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #f5a623;
+  margin-bottom: 14px;
+}
+
+.hero-post h1 {
+  font-size: 56px;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.post-subtitle {
+  font-size: 18px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* META STRIP — quick facts under hero */
+.post-meta-section {
+  background: #000;
+  padding: 32px 0;
+  border-bottom: 1px solid #222;
+}
+
+.post-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.post-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.post-meta-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.post-meta-value {
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .post-meta-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .post-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* POST BODY */
+.post-body {
+  background: #000;
+}
+
+.post-container {
+  /* Narrower than the default container for readable line length */
+  width: min(780px, 92%);
+}
+
+.post-section {
+  margin-bottom: 56px;
+}
+
+.post-heading {
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #fff;
+  border-left: 3px solid #f5a623;
+  padding-left: 14px;
+}
+
+.post-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+
+.post-section p strong {
+  color: #fff;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.post-list li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ddd;
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.post-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 10px;
+  height: 1px;
+  background: #f5a623;
+}
+
+/* media inside posts (audio embeds, video, images) */
+.post-media {
+  margin: 24px 0 8px;
+}
+
+.post-figure {
+  margin: 24px 0 8px;
+}
+
+.post-figure img {
+  width: 100%;
+  display: block;
+  border: 1px solid #222;
+}
+
+.post-figure figcaption {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+/* gallery (multiple images side by side) */
+.post-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .post-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* back link */
+.post-back {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid #222;
+}
+
+.post-back a {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5a623;
+  text-decoration: none;
+}
+
+.post-back a:hover {
+  color: #fff;
+}
+
+/* is-active styling now handled globally in global.css */
+
+/* ===================================================================
+   IMAGE PLACEHOLDER — visible "drop image here" box for unfilled figures
+   =================================================================== */
+
+.post-figure--placeholder {
+  margin: 24px 0 8px;
+}
+
+.post-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(245, 166, 35, 0.04);
+  border: 2px dashed rgba(245, 166, 35, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  gap: 6px;
+  color: #ccc;
+}
+
+.post-image-placeholder-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5a623;
+  font-weight: 600;
+}
+
+.post-image-placeholder-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ddd;
+  max-width: 480px;
+}
+
+.post-image-placeholder-path {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 11px;
+  color: #888;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+/* Square placeholder variant (for tool screenshots, etc.) */
+.post-image-placeholder--square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Tall placeholder variant (mobile screenshots) */
+.post-image-placeholder--tall {
+  aspect-ratio: 9 / 16;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   BLOG — MOBILE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Blog index card title */
+  .blog-card-title {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+  .blog-card-excerpt {
+    font-size: 13px;
+  }
+  .blog-card-body {
+    padding: 18px 18px 22px;
+  }
+
+  /* Blog post hero */
+  .hero-post h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .post-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .post-subtitle {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Blog post body type */
+  .post-heading {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .post-section p,
+  .post-list li {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .post-section {
+    margin-bottom: 40px;
+  }
+
+  /* Image placeholders on mobile */
+  .post-image-placeholder {
+    padding: 18px;
+  }
+  .post-image-placeholder-desc {
+    font-size: 12px;
+  }
+  .post-image-placeholder-path {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-post h1 {
+    font-size: 28px;
+  }
+  .post-subtitle {
+    font-size: 13px;
+  }
+  .post-heading {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+}

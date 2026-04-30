@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sound Portfolio</title>
   <link rel="icon" type="image/png" href="assets/logo-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/sound-portfolio.css" />
 
@@ -12,15 +15,42 @@
 <body>
 <header class="header">
   <div class="container">
-    <!-- Logo luôn luôn có -->
-    <a class="logo" href="index.html#home">BAO LE</a>
+    <a class="logo" href="index.html#home">
+      <svg class="logo-mark" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="6" y1="13" x2="6" y2="19"/>
+        <line x1="11" y1="9" x2="11" y2="23"/>
+        <line x1="16" y1="5" x2="16" y2="27"/>
+        <line x1="21" y1="9" x2="21" y2="23"/>
+        <line x1="26" y1="13" x2="26" y2="19"/>
+      </svg>
+      <span class="logo-text">BAO LE</span>
+    </a>
 
     <nav class="nav">
-      <a href="index.html#reel">Reel</a>
-      <a href="index.html#bio">About me</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="sound-portfolio.html">Sound Portfolio</a>
-      <a href="team-projects.html">Team Projects</a>
+      <a href="index.html#reel">
+        <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+        Reel
+      </a>
+      <a href="index.html#bio">
+        <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        About me
+      </a>
+      <a href="index.html#contact">
+        <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+        Contact
+      </a>
+      <a href="sound-portfolio.html" class="is-active">
+        <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="11" x2="3" y2="13"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="11" y1="4" x2="11" y2="20"/><line x1="15" y1="8" x2="15" y2="16"/><line x1="19" y1="11" x2="19" y2="13"/></svg>
+        Sound Portfolio
+      </a>
+      <a href="team-projects.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><circle cx="15" cy="12" r="0.6" fill="currentColor"/><circle cx="18" cy="10" r="0.6" fill="currentColor"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258A4 4 0 0 0 17.32 5z"/></svg>
+        Game Audio
+      </a>
+      <a href="blog.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Blog
+      </a>
     </nav>
   </div>
 </header>
@@ -49,31 +79,40 @@
       <p class="quote-author">— Confucius</p>
 
       <p class="quote-body">
-        Strive forward has always been my motto. I will be
-        inspired by the one that come before. I know that not giving up won't guarantee
-        success. I will run with all my might and achieve the goals that I set out for myself.
-        As the name of the website, to reach the top of sound design whether how long it takes.
+        Striving forward has always been my motto, inspired by those who came before me.
+        I know that not giving up doesn't guarantee success — but I'll run with all my
+        might and achieve the goals I set for myself. To reach the top of sound design,
+        no matter how long it takes.
       </p>
 
       <div class="section-divider"></div>
     </div>
   </section>
 
-  <!-- 2) PROFESSIONAL HIGHLIGHTS + VIDEO -->
+  <!-- 2) FEATURED PROJECT — VIRAL IMPACT -->
   <section class="section portfolio-section">
     <div class="container">
-      <h2 class="portfolio-heading">PROFESSIONAL HIGHLIGHTS</h2>
+      <h2 class="portfolio-heading">FEATURED PROJECT</h2>
+
+      <h3 class="project-subtitle">VIRAL IMPACT (2025) — sound for a serious game</h3>
+      <p class="project-meta">Sound Designer · Unity · FMOD · Ableton Live · Serum · Client: 's Heeren Loo</p>
 
       <p class="portfolio-subtitle">
-        Below is a 6 months project where I was the sound designer and the actor at the same time.
-        This project was too promote Münster, showing some location that tourist can visit that 
-        is usually hidden or not easily found on travel website and tourist guide.
+        I built the audio identity for Viral Impact from the ground up — designing
+        SFX with layering and Serum synthesis, composing adaptive music for hub and
+        battle states, building world-specific ambience (WhatsApp, Instagram, Scam
+        worlds), and implementing everything via FMOD + Unity with a centralized
+        AudioManager.
+      </p>
+
+      <p class="portfolio-cta">
+        <a href="blog/viral-impact.html">Read the full breakdown →</a>
       </p>
 
       <div class="embed portfolio-embed">
         <iframe
-          src="https://player.vimeo.com/video/1168821079?autoplay=0"
-          title="Professional Highlights"
+          src="https://player.vimeo.com/video/1169106722?autoplay=0"
+          title="Viral Impact"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen></iframe>
@@ -81,86 +120,229 @@
     </div>
   </section>
 
-<!-- 3) CÁC PROJECT CỤ THỂ -->
-<section class="section projects-section">
-  <div class="container">
+  <!-- 3) PROFESSIONAL HIGHLIGHTS — MÜNSTER -->
+  <section class="section portfolio-section">
+    <div class="container">
+      <h2 class="portfolio-heading">PROFESSIONAL HIGHLIGHTS</h2>
 
-    <div class="projects-grid">
+      <h3 class="project-subtitle">MÜNSTER PROMO (2024)</h3>
+      <p class="project-meta">Sound Designer · On-camera Actor · 6-month project</p>
 
-      <!-- PROJECT 1 -->
-      <article class="project">
-        <h3 class="project-title">LOFI BGM (2024)</h3>
+      <p class="portfolio-subtitle">
+        A 6-month project where I worked as both sound designer and on-camera
+        actor. The film promotes Münster by spotlighting hidden locations that
+        tourists can visit — places not typically featured in travel guides.
+      </p>
+
+      <p class="portfolio-cta">
+        <a href="blog/munster-promo.html">Read the full breakdown →</a>
+      </p>
+
+      <div class="embed portfolio-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1168821079?autoplay=0"
+          title="Münster Promo"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) SOUND LIBRARY — Freesound-style browsable bank of personal sounds -->
+  <section class="section library-section">
+    <div class="container">
+      <h2 class="portfolio-heading">SOUND LIBRARY</h2>
+      <p class="library-intro">
+        A growing collection of sounds I've designed, organised by type. Click any
+        entry to listen. New sounds are added as I make them.
+      </p>
+
+      <!-- FILTER CHIPS -->
+      <div class="library-filters" role="tablist" aria-label="Filter sounds by category">
+        <button type="button" class="library-chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="library-chip" data-filter="sfx" role="tab" aria-selected="false">SFX</button>
+        <button type="button" class="library-chip" data-filter="ui" role="tab" aria-selected="false">UI</button>
+        <button type="button" class="library-chip" data-filter="foley" role="tab" aria-selected="false">Foley</button>
+        <button type="button" class="library-chip" data-filter="ambience" role="tab" aria-selected="false">Ambience</button>
+        <button type="button" class="library-chip" data-filter="music" role="tab" aria-selected="false">Music</button>
+        <button type="button" class="library-chip" data-filter="synthesis" role="tab" aria-selected="false">Synthesis</button>
+      </div>
+
+      <!-- LIBRARY LIST -->
+      <ul class="library-list" id="libraryList">
+
+        <!-- TEMPLATE: copy this <li>...</li> block to add a new sound.
+             Put audio file in assets/library/, update data-src, data-duration,
+             title, category, description, and tag chips.
+             Allowed data-category values: sfx · ui · foley · ambience · music · synthesis -->
+
+        <li class="library-item" data-category="sfx" data-src="assets/library/plasma-pulse-laser.mp3" data-duration="0:04">
+          <button type="button" class="library-play" aria-label="Play Plasma Pulse Laser">
+            <svg class="library-play-icon library-icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            <svg class="library-play-icon library-icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="library-item-body">
+            <div class="library-item-head">
+              <h3 class="library-item-title">Plasma Pulse Laser</h3>
+              <span class="library-item-category">SFX</span>
+            </div>
+            <p class="library-item-desc">
+              A short futuristic laser shot designed for Canyon Racer. Built from a Serum
+              wavetable layered with a noise burst and a high-pass swept tail.
+            </p>
+            <div class="library-item-tags">
+              <span class="library-tag">Ableton</span>
+              <span class="library-tag">Serum</span>
+              <span class="library-tag">Layering</span>
+            </div>
+          </div>
+          <span class="library-item-duration">0:04</span>
+        </li>
+
+        <li class="library-item" data-category="synthesis" data-src="assets/library/cinematic-riser.mp3" data-duration="0:08">
+          <button type="button" class="library-play" aria-label="Play Cinematic Riser">
+            <svg class="library-play-icon library-icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            <svg class="library-play-icon library-icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="library-item-body">
+            <div class="library-item-head">
+              <h3 class="library-item-title">Cinematic Riser</h3>
+              <span class="library-item-category">Synthesis</span>
+            </div>
+            <p class="library-item-desc">
+              A trailer-style riser built entirely in Serum — three layered patches with
+              a pitch envelope, automation on the macros, and a final reverb tail.
+            </p>
+            <div class="library-item-tags">
+              <span class="library-tag">Serum</span>
+              <span class="library-tag">Ableton</span>
+              <span class="library-tag">Sound Design</span>
+            </div>
+          </div>
+          <span class="library-item-duration">0:08</span>
+        </li>
+
+        <li class="library-item" data-category="ambience" data-src="assets/library/cyber-hub-loop.mp3" data-duration="0:30">
+          <button type="button" class="library-play" aria-label="Play Cyber Hub Loop">
+            <svg class="library-play-icon library-icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            <svg class="library-play-icon library-icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="library-item-body">
+            <div class="library-item-head">
+              <h3 class="library-item-title">Cyber Hub Loop</h3>
+              <span class="library-item-category">Ambience</span>
+            </div>
+            <p class="library-item-desc">
+              A loopable hub-world ambience for Viral Impact's WhatsApp world. Subtle
+              digital pad layered with low-volume notification chirps and air movement.
+            </p>
+            <div class="library-item-tags">
+              <span class="library-tag">Ableton</span>
+              <span class="library-tag">FMOD</span>
+              <span class="library-tag">Loop</span>
+            </div>
+          </div>
+          <span class="library-item-duration">0:30</span>
+        </li>
+
+        <li class="library-item" data-category="ui" data-src="assets/library/soft-confirm-tick.mp3" data-duration="0:01">
+          <button type="button" class="library-play" aria-label="Play Soft Confirm Tick">
+            <svg class="library-play-icon library-icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            <svg class="library-play-icon library-icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="library-item-body">
+            <div class="library-item-head">
+              <h3 class="library-item-title">Soft Confirm Tick</h3>
+              <span class="library-item-category">UI</span>
+            </div>
+            <p class="library-item-desc">
+              A friendly UI confirmation tick designed for non-overwhelming feedback —
+              tuned warm and short to suit accessibility-friendly interfaces.
+            </p>
+            <div class="library-item-tags">
+              <span class="library-tag">Ableton</span>
+              <span class="library-tag">Foley</span>
+            </div>
+          </div>
+          <span class="library-item-duration">0:01</span>
+        </li>
+
+        <!-- /TEMPLATE -->
+
+      </ul>
+
+      <p class="library-empty" id="libraryEmpty" hidden>
+        No sounds in this category yet.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5) MUSIC & COMPOSITION -->
+  <section class="section projects-section">
+    <div class="container">
+      <h2 class="portfolio-heading">MUSIC &amp; COMPOSITION</h2>
+
+      <article class="project music-study">
+        <h3 class="project-subtitle">MOOD COMPOSITION STUDY (2024)</h3>
+        <p class="project-meta">Composer · Ableton Live · Three pieces, three moods</p>
+
         <p class="project-text">
-          In 2024, during one of my project I wanted to learn more about different kind of
-          music as well as how to evoke different emotion, for this composition I try to go for
-          a lofi genre combine with C Minor, to create a chill and also sad vibe for days when
-          you feel down and need to be alone. 
+          A self-directed exercise to explore how different keys, instrumentations,
+          and genres evoke contrasting emotional states. I wrote three short pieces —
+          chill, epic, and joyful — to practice writing on-brief for tone and mood.
         </p>
-        <div class="project-media embed">
-          <iframe
+
+        <p class="portfolio-cta">
+          <a href="blog/mood-composition-study.html">Read the full breakdown →</a>
+        </p>
+
+        <div class="music-study-grid">
+
+          <div class="music-study-piece">
+            <h4 class="music-piece-title">Lofi BGM — chill, melancholic</h4>
+            <p class="music-piece-meta">C minor · lofi</p>
+            <div class="embed">
+              <iframe
                 src="https://player.vimeo.com/video/1169002810?autoplay=0"
-                title="SadChill I guess"
+                title="Lofi BGM"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen>
-          </iframe>
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="music-study-piece">
+            <h4 class="music-piece-title">Epic Orchestral — fantasy, awe</h4>
+            <p class="music-piece-meta">C major · orchestral</p>
+            <div class="embed">
+              <iframe
+                src="https://player.vimeo.com/video/1169002784?autoplay=0"
+                title="Epic Orchestral"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="music-study-piece">
+            <h4 class="music-piece-title">Happy and Innocent — joyful, playful</h4>
+            <p class="music-piece-meta">C major · orchestral</p>
+            <div class="embed">
+              <iframe
+                src="https://player.vimeo.com/video/1169002773?autoplay=0"
+                title="Happy and Innocent"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
         </div>
       </article>
-
-      <!-- PROJECT 2 -->
-      <article class="project">
-        <h3 class="project-title">EPIC ORCHESTRAL (2024)</h3>
-        <p class="project-text">
-          In 2024, during the same project as LOFI BGM , for this composition I try to go for
-          a orchestral genre combine with C Major, to bring out a fantasy theme when the character 
-          discover a whole new world and convey their feeling as well as give player context of how 
-          marvel the world is.
-        </p>
-        <div class="project-media embed">
-          <iframe
-            src="https://player.vimeo.com/video/1169002784?autoplay=0"
-            title="Magnificient Indeed"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </article>
-
-      <!-- PROJECT 3 -->
-      <article class="project">
-        <h3 class="project-title">HAPPY AND INNOCENT (2024)</h3>
-        <p class="project-text">
-          In 2024, during the same project as LOFI BGM , for this composition I try to go for
-          a orchestral genre combine with C Major, I want to test out different kind of 
-          instrument that bring a joyful melodies.
-        </p>
-         <div class="project-media embed">
-          <iframe
-            src="https://player.vimeo.com/video/1169002773?autoplay=0"
-            title="Magnificient Indeed"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </article>
-
-      <!-- PROJECT 4 -->
-      <!-- <article class="project">
-        <h3 class="project-title">JUKE BOX HERO (2019)</h3>
-        <p class="project-text">
-          In 2019, I was signed on as a dialogue, SFX, and music mixer for the short film Juke Box Hero...
-        </p>
-        <div class="project-media">
-          <img src="assets/jukebox-hero-thumb.jpg" alt="Juke Box Hero still">
-        </div>
-      </article> -->
-
-      <!-- Bạn muốn thêm nữa thì copy thêm <article class="project"> ... </article> -->
 
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 </main>

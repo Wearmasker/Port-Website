@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Bao Le</title>
+  <link rel="icon" type="image/png" href="assets/logo-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="index.html#home">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="13" x2="6" y2="19"/>
+          <line x1="11" y1="9" x2="11" y2="23"/>
+          <line x1="16" y1="5" x2="16" y2="27"/>
+          <line x1="21" y1="9" x2="21" y2="23"/>
+          <line x1="26" y1="13" x2="26" y2="19"/>
+        </svg>
+        <span class="logo-text">BAO LE</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html#reel">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+          Reel
+        </a>
+        <a href="index.html#bio">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          About me
+        </a>
+        <a href="index.html#contact">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          Contact
+        </a>
+        <a href="sound-portfolio.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="11" x2="3" y2="13"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="11" y1="4" x2="11" y2="20"/><line x1="15" y1="8" x2="15" y2="16"/><line x1="19" y1="11" x2="19" y2="13"/></svg>
+          Sound Portfolio
+        </a>
+        <a href="team-projects.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><circle cx="15" cy="12" r="0.6" fill="currentColor"/><circle cx="18" cy="10" r="0.6" fill="currentColor"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258A4 4 0 0 0 17.32 5z"/></svg>
+          Game Audio
+        </a>
+        <a href="blog.html" class="is-active">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Blog
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="blog">
+    <!-- HERO -->
+    <section class="hero hero-blog">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>BLOG</h1>
+        <p>Notes on my process — how each project came together, what I learned, and what I'd do differently.</p>
+      </div>
+    </section>
+
+    <!-- POSTS LIST -->
+    <section class="section blog-list-section">
+      <div class="container">
+
+        <div class="blog-grid">
+
+          <!-- POST: VIRAL IMPACT -->
+          <a class="blog-card" href="blog/viral-impact.html">
+            <div class="blog-card-media">
+              <img src="assets/popup-fmod.jpg" alt="Viral Impact — sound design and implementation">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-card-meta">CASE STUDY · 2025</span>
+              <h3 class="blog-card-title">VIRAL IMPACT — Sound for a Serious Game</h3>
+              <p class="blog-card-excerpt">
+                How I composed, designed and implemented the audio for a client project
+                made for 's Heeren Loo, using Ableton, Unity, and FMOD.
+              </p>
+              <span class="blog-card-cta">Read post →</span>
+            </div>
+          </a>
+
+          <!-- POST: CANYON RACER -->
+          <a class="blog-card" href="blog/canyon-racer.html">
+            <div class="blog-card-media">
+              <img src="assets/popup-unity.jpg" alt="Canyon Racer — adaptive engine and combat SFX">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-card-meta">CASE STUDY · 2024</span>
+              <h3 class="blog-card-title">CANYON RACER — Adaptive Engine Sound</h3>
+              <p class="blog-card-excerpt">
+                Building layered, parameter-driven engine sounds and synth-driven
+                combat SFX for a futuristic mobile racer in FMOD + Unity.
+              </p>
+              <span class="blog-card-cta">Read post →</span>
+            </div>
+          </a>
+
+          <!-- POST: VERTIGATO -->
+          <a class="blog-card" href="blog/vertigato.html">
+            <div class="blog-card-media">
+              <img src="assets/popup-unity.jpg" alt="Vertigato — VR spatial audio">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-card-meta">CASE STUDY · 2024–2025</span>
+              <h3 class="blog-card-title">VERTIGATO — Spatial Audio for VR</h3>
+              <p class="blog-card-excerpt">
+                How I designed grounding, spatial audio for a VR experience built
+                to introduce first-time users to Saxion CMGT.
+              </p>
+              <span class="blog-card-cta">Read post →</span>
+            </div>
+          </a>
+
+          <!-- POST: SKIDDLY -->
+          <a class="blog-card" href="blog/skiddly.html">
+            <div class="blog-card-media">
+              <img src="assets/popup-ableton.jpg" alt="Skiddly — sound for an educational kids game">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-card-meta">CASE STUDY · 2023</span>
+              <h3 class="blog-card-title">SKIDDLY — Sound for Kids (8–15)</h3>
+              <p class="blog-card-excerpt">
+                Designing warm, non-fatiguing SFX for an educational mobile game
+                about sustainable development — and what changes when your players
+                are children.
+              </p>
+              <span class="blog-card-cta">Read post →</span>
+            </div>
+          </a>
+
+          <!-- POST: MÜNSTER PROMO -->
+          <a class="blog-card" href="blog/munster-promo.html">
+            <div class="blog-card-media">
+              <img src="assets/popup-ableton.jpg" alt="Münster Promo — sound design and on-camera">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-card-meta">CASE STUDY · 2024</span>
+              <h3 class="blog-card-title">MÜNSTER PROMO — Sound + On-Camera</h3>
+              <p class="blog-card-excerpt">
+                Six months of sound design and on-camera work for a tourism film
+                spotlighting the corners of Münster that travel guides miss.
+              </p>
+              <span class="blog-card-cta">Read post →</span>
+            </div>
+          </a>
+
+          <!-- POST: MOOD COMPOSITION STUDY -->
+          <a class="blog-card" href="blog/mood-composition-study.html">
+            <div class="blog-card-media">
+              <img src="assets/popup-ableton.jpg" alt="Mood Composition Study — three pieces, three moods">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-card-meta">CASE STUDY · 2024</span>
+              <h3 class="blog-card-title">MOOD COMPOSITION STUDY — Three Moods</h3>
+              <p class="blog-card-excerpt">
+                A self-directed exercise: three short pieces in three contrasting
+                moods to practice writing on-brief for tone and emotion.
+              </p>
+              <span class="blog-card-cta">Read post →</span>
+            </div>
+          </a>
+
+          <!-- More posts will go here. Copy any <a class="blog-card"> block to add another. -->
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/baoleviet/" target="_blank">LINKEDIN</a>
+      </div>
+
+      <div class="footer-copy">
+        © <span id="year"></span> Bao Le Ichi Sound
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

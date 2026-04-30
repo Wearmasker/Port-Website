@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>baoleichisound</title>
   <link rel="icon" type="image/png" href="assets/logo-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/home.css" />
 
@@ -14,15 +17,43 @@
 <body>
   <header class="header">
     <div class="container">
-      <!-- Logo luôn luôn có -->
-      <a class="logo" href="index.html#home">BAO LE</a>
+      <!-- LOGO LOCKUP: waveform mark + wordmark -->
+      <a class="logo" href="index.html#home">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="13" x2="6" y2="19"/>
+          <line x1="11" y1="9" x2="11" y2="23"/>
+          <line x1="16" y1="5" x2="16" y2="27"/>
+          <line x1="21" y1="9" x2="21" y2="23"/>
+          <line x1="26" y1="13" x2="26" y2="19"/>
+        </svg>
+        <span class="logo-text">BAO LE</span>
+      </a>
 
       <nav class="nav">
-        <a href="index.html#reel">Reel</a>
-        <a href="index.html#bio">About me</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="sound-portfolio.html">Sound Portfolio</a>
-        <a href="team-projects.html">Team Projects</a>
+        <a href="index.html#reel">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+          Reel
+        </a>
+        <a href="index.html#bio">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          About me
+        </a>
+        <a href="index.html#contact">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          Contact
+        </a>
+        <a href="sound-portfolio.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="11" x2="3" y2="13"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="11" y1="4" x2="11" y2="20"/><line x1="15" y1="8" x2="15" y2="16"/><line x1="19" y1="11" x2="19" y2="13"/></svg>
+          Sound Portfolio
+        </a>
+        <a href="team-projects.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><circle cx="15" cy="12" r="0.6" fill="currentColor"/><circle cx="18" cy="10" r="0.6" fill="currentColor"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258A4 4 0 0 0 17.32 5z"/></svg>
+          Game Audio
+        </a>
+        <a href="blog.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Blog
+        </a>
       </nav>
     </div>
   </header>
@@ -82,10 +113,16 @@
             <div class="home-card-title">Sound Portfolio</div>
           </a>
 
-          <!-- CARD 2: PERSONAL PROJECTS -->
+          <!-- CARD 2: GAME AUDIO -->
           <a class="home-card" href="team-projects.html">
-            <img src="assets/personal-hero.jpg" alt="Team Projects">
-            <div class="home-card-title">Team Projects</div>
+            <img src="assets/personal-hero.jpg" alt="Game Audio">
+            <div class="home-card-title">Game Audio</div>
+          </a>
+
+          <!-- CARD 3: BLOG -->
+          <a class="home-card" href="blog.html">
+            <img src="assets/blog-hero.jpg" alt="Blog">
+            <div class="home-card-title">Blog</div>
           </a>
 
         </div>
@@ -219,7 +256,7 @@ I'm also a big fan of Futzbox, RX7, FabFilter Pro Q, and anything doppler-relate
                 <a href="https://youtu.be/_gBbZ0Tz5QM?si=zmr6wPo1zi1k3lDG" target="_blank">
                   Magical Skills
                 </a>,
-                from Fate Grand Order: Babylonia, that ultilize synthesizer combine
+                from Fate Grand Order: Babylonia, that utilizes synthesizers combined
                 with riser and bass which give make audience have to say "wow".
               </li>
 
@@ -297,10 +334,37 @@ I'm also a big fan of Futzbox, RX7, FabFilter Pro Q, and anything doppler-relate
 
 
 
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:vietbao271004@gmail.com">vietbao271004@gmail.com</a></p>
-      <p>Linkedin: <a href="#">https://www.linkedin.com/in/baoleviet/</a></p>
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="contact-heading">CONTACT</h2>
+        <p class="contact-intro">
+          I'm open to junior sound design, technical sound design, and game audio
+          opportunities. The fastest way to reach me is on LinkedIn — I usually
+          reply within a day.
+        </p>
+
+        <div class="contact-actions">
+          <!-- PRIMARY: LinkedIn -->
+          <a class="contact-btn contact-btn--primary"
+             href="https://www.linkedin.com/in/baoleviet/"
+             target="_blank" rel="noopener">
+            <svg class="contact-btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43c-1.14 0-2.06-.93-2.06-2.06 0-1.14.92-2.07 2.06-2.07 1.14 0 2.06.93 2.06 2.07 0 1.14-.92 2.06-2.06 2.06zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45C23.2 24 24 23.22 24 22.27V1.72C24 .77 23.2 0 22.22 0z"/>
+            </svg>
+            Message me on LinkedIn
+          </a>
+
+          <!-- SECONDARY: Email reveal (built via JS to avoid scrapers) -->
+          <button class="contact-btn contact-btn--secondary" id="emailReveal" type="button"
+                  data-a="vietbao271004" data-b="gmail" data-c="com">
+            <svg class="contact-btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-10 5L2 7"/>
+            </svg>
+            <span>Show email</span>
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 
