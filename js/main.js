@@ -261,6 +261,81 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ==========================================================================
+//  MOBILE HAMBURGER MENU — inject a toggle button into the header on every
+//  page and wire up open/close behavior. CSS handles all the visibility,
+//  animation, and the desktop-vs-mobile show/hide via @media query.
+// ==========================================================================
+(function () {
+  function init() {
+    const headerInner = document.querySelector(".header .container");
+    if (!headerInner) return;
+
+    const nav = headerInner.querySelector(".nav");
+    if (!nav) return;
+
+    // Don't double-inject if for some reason init runs twice
+    if (headerInner.querySelector(".menu-toggle")) return;
+
+    // Build the hamburger button
+    const button = document.createElement("button");
+    button.className = "menu-toggle";
+    button.type = "button";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", "Open menu");
+    button.setAttribute("aria-controls", "primary-nav");
+    button.innerHTML =
+      '<span class="menu-toggle-line"></span>' +
+      '<span class="menu-toggle-line"></span>' +
+      '<span class="menu-toggle-line"></span>';
+
+    nav.id = nav.id || "primary-nav";
+
+    // Insert button before the nav (so it sits between logo and nav)
+    headerInner.insertBefore(button, nav);
+
+    function setOpen(isOpen) {
+      nav.classList.toggle("is-open", isOpen);
+      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      button.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      document.body.classList.toggle("menu-open", isOpen);
+    }
+
+    button.addEventListener("click", () => {
+      const willOpen = !nav.classList.contains("is-open");
+      setOpen(willOpen);
+    });
+
+    // Close when any nav link is tapped
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    // Close on Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        setOpen(false);
+      }
+    });
+
+    // Close if viewport grows past the mobile breakpoint while menu is open
+    let mql;
+    if (window.matchMedia) {
+      mql = window.matchMedia("(min-width: 721px)");
+      const onChange = (e) => { if (e.matches) setOpen(false); };
+      if (mql.addEventListener) mql.addEventListener("change", onChange);
+      else if (mql.addListener) mql.addListener(onChange);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+
+// ==========================================================================
 //  SCROLL-REVEAL — fade each .section into view as it enters the viewport.
 //  Sections are visible by default; we add .reveal-ready (which hides them)
 //  only after JS confirms it can run. This keeps the site usable for any

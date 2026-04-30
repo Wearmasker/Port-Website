@@ -155,19 +155,127 @@ body {
   transform: translateY(-1px);
 }
 
-/* Mobile: wrap nav under logo if needed */
+/* ===== HAMBURGER TOGGLE BUTTON =====
+   Hidden on desktop, shown on mobile. Injected by JS on every page. */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.menu-toggle-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== MOBILE: nav becomes a slide-down drawer ===== */
 @media (max-width: 720px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  /* Keep header on a single row */
   .header .container {
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap;
   }
+
+  /* Nav drops out of the flex flow into a fixed-position panel */
   .nav {
-    width: 100%;
+    position: fixed;
+    top: 56px;            /* below the header bar */
+    left: 0;
+    right: 0;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0;
+    background: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    /* Closed by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+
+    /* Cap height + scroll if needed */
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
   }
+
+  .nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Each link becomes a tap-friendly row */
   .nav a {
-    font-size: 12px;
-    letter-spacing: 0.5px;
+    padding: 14px 22px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 0.9;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+
+  /* Disable the underline animation inside the drawer */
+  .nav a::after {
+    display: none;
+  }
+
+  /* Active page link gets a left orange marker instead */
+  .nav a.is-active {
+    border-left: 3px solid #f5a623;
+    padding-left: 19px;
+  }
+
+  /* Lock background scroll while menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* On very small phones, drop the drawer slightly to match smaller header */
+@media (max-width: 480px) {
+  .nav {
+    top: 52px;
+    max-height: calc(100vh - 52px);
   }
 }
 
