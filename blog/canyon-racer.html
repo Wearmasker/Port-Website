@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Canyon Racer — Bao Le</title>
+  <title>Canyon Racer | Bao Le</title>
   <link rel="icon" type="image/png" href="../assets/logo-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +62,7 @@
       <div class="hero-content container">
         <span class="post-eyebrow">CASE STUDY · 2024</span>
         <h1>CANYON RACER</h1>
-        <p class="post-subtitle">Adaptive engine sound, lasers, and explosions for a futuristic mobile plane racer — built in FMOD + Unity.</p>
+        <p class="post-subtitle">Adaptive engine sound, lasers, and explosions for a futuristic mobile plane racer, built in FMOD + Unity.</p>
       </div>
     </section>
 
@@ -120,7 +120,7 @@
           <figure class="post-figure post-figure--placeholder">
             <div class="post-image-placeholder">
               <span class="post-image-placeholder-label">[ Image placeholder ]</span>
-              <span class="post-image-placeholder-desc">In-game screenshot of Canyon Racer — a plane mid-race, ideally during combat.</span>
+              <span class="post-image-placeholder-desc">In-game screenshot of Canyon Racer: a plane mid-race, ideally during combat.</span>
               <span class="post-image-placeholder-path">assets/blog/canyon-racer-gameplay.jpg</span>
             </div>
             <figcaption>Caption goes here.</figcaption>
@@ -134,8 +134,8 @@
             <!-- TODO: What was your audio personality? Pure synth/sci-fi, or
                  grounded with real engine textures? How did you balance "futuristic"
                  with "readable" so players still got useful audio feedback? -->
-            For the futuristic feel I went mostly synth-driven — Serum patches and
-            heavy modulation — but anchored everything with real recorded textures
+            For the futuristic feel I went mostly synth-driven (Serum patches and
+            heavy modulation) but anchored everything with real recorded textures
             so the game still felt physical. Players needed to *feel* the speed
             and *hear* the difference between planes within a second of switching.
           </p>
@@ -150,9 +150,9 @@
                  multiple layers (idle / mid / max throttle)? FMOD parameters driven
                  by Unity's velocity? Cross-fading between RPM zones? -->
             The engine sound is the audio centerpiece of any racer, so I built it
-            in FMOD with [N LAYERS — idle, low throttle, mid, max] crossfaded by an
+            in FMOD with [N LAYERS: idle, low throttle, mid, max] crossfaded by an
             RPM parameter driven from Unity. As the plane accelerates, [WHAT
-            CHANGES — pitch, volume, filter, timbre]. Different aircraft use
+            CHANGES: pitch, volume, filter, timbre]. Different aircraft use
             different layer sets so each plane has a distinct sonic identity.
           </p>
 
@@ -173,10 +173,10 @@
             <!-- TODO: How did you build the combat SFX? Layered design with Serum
                  leads + noise bursts? Procedural variation in FMOD so the laser
                  doesn't sound identical every shot? -->
-            Combat sounds were layered designs — a Serum-based [LEAD ELEMENT] for
+            Combat sounds were layered designs: a Serum-based [LEAD ELEMENT] for
             character, a [NOISE / TRANSIENT LAYER] for impact, and a [TAIL
             ELEMENT] for distance. In FMOD I used pitch and timbre randomisation
-            so consecutive shots don't sound mechanical — small variations make a
+            so consecutive shots don't sound mechanical. Small variations make a
             small library feel much bigger.
           </p>
 
@@ -192,14 +192,14 @@
 
         <!-- 5) IMPLEMENTATION -->
         <section class="post-section">
-          <h2 class="post-heading">IMPLEMENTATION — FMOD + UNITY</h2>
+          <h2 class="post-heading">IMPLEMENTATION: FMOD + UNITY</h2>
           <p>
             <!-- TODO: How did the audio get into Unity? Per-plane FMOD emitters,
                  or a centralized AudioManager? Which Unity events trigger which
                  FMOD events? Any C# scripting worth mentioning? -->
             All audio runs through FMOD's Unity integration. Each plane has its
             own event emitter for engine and weapon sounds, and global events
-            (UI, music, ambience) are handled through [APPROACH — centralised
+            (UI, music, ambience) are handled through [APPROACH: centralised
             AudioManager / FMOD listener / etc.]. Unity's [VELOCITY / RIGIDBODY /
             INPUT] feeds directly into FMOD parameters every frame.
           </p>
@@ -210,7 +210,7 @@
           <h2 class="post-heading">WHAT I'D DO DIFFERENTLY</h2>
           <p>
             <!-- TODO: 1–2 things you'd change with hindsight. -->
-            With hindsight, [SPECIFIC THING you'd change] — [why]. Next time I'd
+            With hindsight, [SPECIFIC THING you'd change] (because [why]). Next time I'd
             [SPECIFIC APPROACH] from the start, especially because [REASON].
           </p>
         </section>

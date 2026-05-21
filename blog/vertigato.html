@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vertigato — Bao Le</title>
+  <title>Vertigato | Bao Le</title>
   <link rel="icon" type="image/png" href="../assets/logo-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +62,7 @@
       <div class="hero-content container">
         <span class="post-eyebrow">CASE STUDY · 2024–2025</span>
         <h1>VERTIGATO</h1>
-        <p class="post-subtitle">Spatial audio for a VR experience built to introduce new students to Saxion CMGT — designed especially for first-time VR users.</p>
+        <p class="post-subtitle">Spatial audio for a VR experience built to introduce new students to Saxion CMGT, designed especially for first-time VR users.</p>
       </div>
     </section>
 
@@ -106,13 +106,13 @@
         <section class="post-section">
           <h2 class="post-heading">THE BRIEF</h2>
           <p>
-            <!-- TODO: 2–3 sentences. Who set the brief — the school, the team?
-                 What was the open day goal — give incoming students a hands-on
-                 first taste of what CMGT actually does? Was there a target
+            <!-- TODO: 2–3 sentences. Who set the brief (the school, the team)?
+                 What was the open day goal (give incoming students a hands-on
+                 first taste of what CMGT actually does)? Was there a target
                  experience length? -->
             Vertigato is a Unity VR experience my team built for a Saxion CMGT
-            open-day function. The goal was to give incoming students — many of
-            them with no prior VR experience — a hands-on first taste of our
+            open-day function. The goal was to give incoming students (many of
+            them with no prior VR experience) a hands-on first taste of our
             programme's work in around [N MINUTES] of playtime.
           </p>
 
@@ -131,14 +131,14 @@
           <h2 class="post-heading">THE APPROACH</h2>
           <p>
             <!-- TODO: What's different about audio for VR vs flat-screen games?
-                 How did you think about the soundscape — should it feel exciting
+                 How did you think about the soundscape: should it feel exciting
                  to wow open-day visitors, or grounding to help first-time VR users
                  settle in? -->
-            VR audio behaves differently from flat-screen audio — players turn
+            VR audio behaves differently from flat-screen audio: players turn
             their heads, look around, and rely on sound to orient themselves in a
             world they're physically inside. For first-time VR users this matters
-            even more: ambience needs to anchor, not overwhelm. I aimed for [TONE
-            — calming and grounding / energetic and exciting] depending on the
+            even more: ambience needs to anchor, not overwhelm. I aimed for [TONE:
+            calming and grounding / energetic and exciting] depending on the
             section of the experience.
           </p>
         </section>
@@ -152,7 +152,7 @@
                  feel too close or too dead? Any reverb zones for different parts
                  of the scene? -->
             Every meaningful sound in the scene was placed in 3D space using
-            FMOD's spatializer. I tuned distance attenuation so [BEHAVIOUR — close
+            FMOD's spatializer. I tuned distance attenuation so [BEHAVIOUR: close
             objects feel intimate, distant ones still readable], and used reverb
             zones to give different parts of the world their own acoustic
             identity. The result is that players can roughly tell where they are
@@ -186,14 +186,14 @@
 
         <!-- 5) IMPLEMENTATION -->
         <section class="post-section">
-          <h2 class="post-heading">IMPLEMENTATION — FMOD + UNITY</h2>
+          <h2 class="post-heading">IMPLEMENTATION: FMOD + UNITY</h2>
           <p>
             <!-- TODO: How did audio get triggered? Trigger volumes, gaze-based
                  events, hand-tracking interactions? Any C# scripting worth calling
                  out? -->
-            Audio is triggered through [METHOD — Unity collider triggers, gaze
+            Audio is triggered through [METHOD: Unity collider triggers, gaze
             events, controller interactions], with FMOD events fired from C#.
-            [SPECIFIC TECHNICAL CHALLENGE — e.g. handling occlusion when the
+            [SPECIFIC TECHNICAL CHALLENGE: e.g. handling occlusion when the
             player walks behind objects, or tying ambience to scene transitions].
           </p>
         </section>
