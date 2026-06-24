@@ -62,7 +62,7 @@
       <div class="hero-content container">
         <span class="post-eyebrow">CASE STUDY · 2024</span>
         <h1>CANYON RACER</h1>
-        <p class="post-subtitle">A mobile plane racer built in Unity by a team of 7 over 6 weeks — where I wore three hats: sound designer, mechanic designer, and documentation lead.</p>
+        <p class="post-subtitle">A mobile plane racer built in Unity by a team of 7 over 6 weeks, where I wore three hats: sound designer, mechanic designer, and documentation lead.</p>
       </div>
     </section>
 
@@ -107,7 +107,7 @@
           <h2 class="post-heading">THE PROJECT</h2>
           <p>
             Canyon Racer is a mobile plane racing game where the player picks an
-            aircraft — each with its own skill set and stats — and races against
+            aircraft, each with its own skill set and stats, and races against
             AI opponents through a desert canyon. The goal is simple: cross the
             finish line first after two laps of the map. The twist is that the
             track is alive. You can shoot the canyon's obstacles to open up
@@ -123,7 +123,7 @@
 
           <figure class="post-figure">
             <video src="../assets/blog/canyon-racer-gameplay.mp4" controls playsinline preload="metadata" poster="../assets/blog/canyon-racer-poster.jpg"></video>
-            <figcaption>Gameplay — two laps through the canyon, with power-up rings, obstacles, and plane abilities in play.</figcaption>
+            <figcaption>Gameplay: two laps through the canyon, with power-up rings, obstacles, and plane abilities in play.</figcaption>
           </figure>
         </section>
 
@@ -136,7 +136,7 @@
             each carries a unique Attack Boost ability on its own duration and
             cooldown. The Medium Plane, for example, leans on a balanced stat line
             and an Attack Boost that raises the damage it deals to other planes for
-            a short window — a deliberate, aggressive pick rather than a pure speed
+            a short window, a deliberate, aggressive pick rather than a pure speed
             build.
           </p>
           <p>
@@ -147,13 +147,13 @@
             and aim matter as much as speed.
           </p>
 
-          <figure class="post-figure post-figure--placeholder">
-            <div class="post-image-placeholder">
-              <span class="post-image-placeholder-label">[ Image placeholder ]</span>
-              <span class="post-image-placeholder-desc">Plane-select screen showing the three aircraft and their stats / Attack Boost ability.</span>
-              <span class="post-image-placeholder-path">assets/blog/canyon-racer-select.jpg</span>
+          <figure class="post-figure">
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:center;">
+              <img src="../assets/blog/canyon-racer-plane-light.png" alt="The light, fast Canyon Racer aircraft, a sleek white and green plane." style="width:100%; display:block; border:0;" />
+              <img src="../assets/blog/canyon-racer-plane-medium.png" alt="The medium Canyon Racer aircraft, a yellow plane with its robot pilot." style="width:100%; display:block; border:0;" />
+              <img src="../assets/blog/canyon-racer-plane-heavy.png" alt="The heavy Canyon Racer aircraft, a bulky red and grey plane." style="width:100%; display:block; border:0;" />
             </div>
-            <figcaption>The plane-select screen — each aircraft has its own stats and a unique Attack Boost.</figcaption>
+            <figcaption>The three selectable aircraft (light, medium, and heavy), each with its own stats and a unique Attack Boost.</figcaption>
           </figure>
         </section>
 
@@ -161,12 +161,15 @@
         <section class="post-section">
           <h2 class="post-heading">MY ROLE</h2>
           <p>
-            The seven-person team broke down into two designers, three artists,
-            and two engineers. Within that, I covered three areas: sound design,
-            mechanic design, and documentation. Wearing several hats on a short
-            timeline meant I spent as much time keeping shared knowledge organised
-            and the design coherent as I did building audio — and the three roles
-            fed each other constantly.
+            Our team, <strong>Ctrl Alt Delete</strong>, was seven people: two
+            designers (myself and Alexander), two engineers (Antonio and Nikola),
+            and three artists (Daphne, Memsi, and Hendrik). As one of the designers
+            I owned the audio end-to-end (sound design and implementation) and
+            also drove the documentation and the playtesting that kept the design
+            honest, while contributing to mechanic design along the way. Wearing
+            several hats on a short timeline meant the roles fed each other
+            constantly: what I learned in a playtest went straight into the docs
+            and the next audio pass.
           </p>
         </section>
 
@@ -177,7 +180,7 @@
             On the audio side I handled the whole pipeline: collecting and
             recording source material, building original sound effects in Ableton
             Live, editing and shaping them, and scripting them into the game. The
-            brief I set for myself was simple — every plane should feel different,
+            brief I set for myself was simple: every plane should feel different,
             every shot should feel impactful, and the whole mix needs to survive
             on mobile speakers.
           </p>
@@ -190,15 +193,23 @@
             shots never feel mechanical. Small variations make a small library
             feel much bigger.
           </p>
+          <p>
+            Because this is a mobile game, build size and memory matter, so part of
+            the audio job was format optimisation, weighing <strong>OGG vs MP3</strong>
+            per sound to keep the package light without giving up quality on phone
+            speakers.
+          </p>
 
-          <figure class="post-figure post-figure--placeholder">
-            <div class="post-image-placeholder">
-              <span class="post-image-placeholder-label">[ FMOD / Ableton screenshot ]</span>
-              <span class="post-image-placeholder-desc">FMOD event view or an Ableton session showing the SFX design — engine, lasers, or explosions.</span>
-              <span class="post-image-placeholder-path">assets/blog/canyon-racer-fmod.jpg</span>
-            </div>
-            <figcaption>Authoring SFX in Ableton, implemented through FMOD in Unity.</figcaption>
-          </figure>
+          <div class="post-gallery">
+            <figure class="post-figure">
+              <img src="../assets/blog/canyon-racer-ableton.jpg" alt="An Ableton Live session for Canyon Racer, showing layered MIDI and audio tracks used to build the game's sound effects and music." />
+              <figcaption>Building the SFX and music in Ableton Live.</figcaption>
+            </figure>
+            <figure class="post-figure">
+              <img src="../assets/blog/canyon-racer-fmod.jpg" alt="An FMOD Studio event from Canyon Racer, showing the event editor and master track routing used to implement the audio in Unity." />
+              <figcaption>Implementing the events in FMOD for the Unity build.</figcaption>
+            </figure>
+          </div>
         </section>
 
         <!-- 5) MECHANIC DESIGN -->
@@ -207,8 +218,8 @@
           <p>
             As a mechanic designer I helped shape how the race actually plays.
             Several games steered our direction. The power-up loop borrows from
-            Mario Kart — each aircraft has a unique ability, and flying through
-            rings grants a boost — which turns the track into something you read
+            Mario Kart: each aircraft has a unique ability, and flying through
+            rings grants a boost, which turns the track into something you read
             and exploit rather than just drive around. We pulled camera ideas from
             a handful of flight games so the player genuinely feels like they're
             piloting an aircraft through the canyon, and we built a UI tuned for
@@ -221,13 +232,9 @@
             frustrating.
           </p>
 
-          <figure class="post-figure post-figure--placeholder">
-            <div class="post-image-placeholder">
-              <span class="post-image-placeholder-label">[ Image placeholder ]</span>
-              <span class="post-image-placeholder-desc">Power-up rings, obstacles, and ability effects in the canyon — the mechanics in action.</span>
-              <span class="post-image-placeholder-path">assets/blog/canyon-racer-mechanics.jpg</span>
-            </div>
-            <figcaption>Power-up rings, shootable obstacles, and plane abilities — the systems that make the track interactive.</figcaption>
+          <figure class="post-figure">
+            <img src="../assets/blog/canyon-racer-prototype.jpg" alt="A greybox prototype of Canyon Racer running in Unity: a plane flying through a canyon toward a rock arch, with on-screen Skill and Shoot buttons, a race position, and a countdown." />
+            <figcaption>A greybox prototype mid-race, with the mobile Skill / Shoot controls, race position, and shootable obstacles in place (FMOD running in-engine, top-left).</figcaption>
           </figure>
         </section>
 
@@ -236,14 +243,38 @@
           <h2 class="post-heading">DOCUMENTATION &amp; TESTING</h2>
           <p>
             With seven people moving fast for six weeks, documentation was the glue.
-            I owned the design docs — capturing mechanics, stats, and decisions so
-            artists and engineers were building against the same source of truth —
-            and kept them current as the design changed. Paired with hands-on
-            testing, this is where the sound, mechanic, and documentation roles
-            came together: I could spot a problem in playtest, reason about the
-            fix as a designer, and write it down clearly enough for the team to act
-            on.
+            I owned the design docs, capturing mechanics, stats, and decisions so
+            artists and engineers were building against the same source of truth,
+            and kept them current as the design changed.
           </p>
+          <p>
+            I also ran the playtesting across three iterations, gathering structured
+            feedback after each build. Early rounds told us the core loop was fun but
+            hard to control and a little thin ("fun trying to fly the plane", "driving
+            through things is really hard"). By the later rounds players were calling
+            out the art style, the motion blur sense of speed, and the per-character
+            special attacks as highlights, while flagging real balance issues like
+            shooting being too strong and the shield ability being too short. That
+            feedback fed straight back into the docs and the next pass, which is where
+            the sound, testing, and documentation roles came together: spot a problem
+            in playtest, reason about the fix, write it down clearly enough for the
+            team to act on.
+          </p>
+
+          <div class="post-gallery">
+            <figure class="post-figure">
+              <img src="../assets/blog/canyon-racer-playtest-1.jpg" alt="Playtest feedback responses asking whether the game was fun and easy to understand." />
+              <figcaption>Round one: is it fun, is it readable?</figcaption>
+            </figure>
+            <figure class="post-figure">
+              <img src="../assets/blog/canyon-racer-playtest-2.jpg" alt="Playtest feedback responses about what interested players most and what they would change." />
+              <figcaption>What players liked, and what they'd change.</figcaption>
+            </figure>
+            <figure class="post-figure">
+              <img src="../assets/blog/canyon-racer-playtest-3.jpg" alt="Later playtest feedback praising the art style and mechanics while flagging balance issues." />
+              <figcaption>Later round: art style and abilities land; balance needs work.</figcaption>
+            </figure>
+          </div>
         </section>
 
         <!-- BACK LINK -->

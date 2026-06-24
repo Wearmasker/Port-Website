@@ -62,7 +62,7 @@
       <div class="hero-content container">
         <span class="post-eyebrow">CASE STUDY · 2024–2025</span>
         <h1>VERTIGATO</h1>
-        <p class="post-subtitle">Spatial audio for a VR experience built to introduce new students to Saxion CMGT, designed especially for first-time VR users.</p>
+        <p class="post-subtitle">A VR experience that plays on the fear of heights, built in Unity by team Bird Throwers. I was a designer on it, covering concept art, the skybox, and all of the audio.</p>
       </div>
     </section>
 
@@ -72,23 +72,23 @@
         <div class="post-meta-grid">
           <div class="post-meta-item">
             <span class="post-meta-label">Role</span>
-            <span class="post-meta-value">Sound Designer</span>
+            <span class="post-meta-value">Designer (Audio · Concept · Skybox)</span>
           </div>
           <div class="post-meta-item">
             <span class="post-meta-label">Engine</span>
             <span class="post-meta-value">Unity</span>
           </div>
           <div class="post-meta-item">
-            <span class="post-meta-label">Middleware</span>
-            <span class="post-meta-value">FMOD</span>
+            <span class="post-meta-label">Audio</span>
+            <span class="post-meta-value">Ableton Live</span>
           </div>
           <div class="post-meta-item">
             <span class="post-meta-label">Format</span>
-            <span class="post-meta-value">VR Experience</span>
+            <span class="post-meta-value">VR (Meta Quest)</span>
           </div>
           <div class="post-meta-item">
-            <span class="post-meta-label">Audience</span>
-            <span class="post-meta-value">First-time VR users</span>
+            <span class="post-meta-label">Team</span>
+            <span class="post-meta-value">Bird Throwers · 7 People</span>
           </div>
           <div class="post-meta-item">
             <span class="post-meta-label">Year</span>
@@ -102,111 +102,119 @@
     <article class="section post-body">
       <div class="container post-container">
 
-        <!-- 1) THE BRIEF -->
+        <!-- COVER -->
         <section class="post-section">
-          <h2 class="post-heading">THE BRIEF</h2>
-          <p>
-            <!-- TODO: 2–3 sentences. Who set the brief (the school, the team)?
-                 What was the open day goal (give incoming students a hands-on
-                 first taste of what CMGT actually does)? Was there a target
-                 experience length? -->
-            Vertigato is a Unity VR experience my team built for a Saxion CMGT
-            open-day function. The goal was to give incoming students (many of
-            them with no prior VR experience) a hands-on first taste of our
-            programme's work in around [N MINUTES] of playtime.
-          </p>
-
-          <figure class="post-figure post-figure--placeholder">
-            <div class="post-image-placeholder">
-              <span class="post-image-placeholder-label">[ Image placeholder ]</span>
-              <span class="post-image-placeholder-desc">A screenshot of the Vertigato VR scene, or a photo of someone playing it on the open-day floor.</span>
-              <span class="post-image-placeholder-path">assets/blog/vertigato-scene.jpg</span>
-            </div>
-            <figcaption>Caption goes here.</figcaption>
+          <figure class="post-figure">
+            <img src="../assets/blog/vertigato-poster.jpg" alt="Vertigato promotional art: a cat silhouette filled with a bright sky and city buildings, with the title vertigato above it." />
+            <figcaption>Key art for Vertigato, built around the cat mascot and the sky-high setting.</figcaption>
           </figure>
         </section>
 
-        <!-- 2) THE APPROACH -->
+        <!-- 1) THE GAME -->
         <section class="post-section">
-          <h2 class="post-heading">THE APPROACH</h2>
+          <h2 class="post-heading">THE GAME</h2>
           <p>
-            <!-- TODO: What's different about audio for VR vs flat-screen games?
-                 How did you think about the soundscape: should it feel exciting
-                 to wow open-day visitors, or grounding to help first-time VR users
-                 settle in? -->
-            VR audio behaves differently from flat-screen audio: players turn
-            their heads, look around, and rely on sound to orient themselves in a
-            world they're physically inside. For first-time VR users this matters
-            even more: ambience needs to anchor, not overwhelm. I aimed for [TONE:
-            calming and grounding / energetic and exciting] depending on the
-            section of the experience.
+            Vertigato is a VR experience built in Unity that plays on the fear of
+            heights. The name is a mash-up of "vertigo" and the Spanish "gato",
+            and the mascot is a cheeky cat. Players step onto rooftops high above a
+            city and take on two short minigames designed to test their VR nerve:
+            walking out across a glass panel without looking down, and defending a
+            bird nest by shooting water at the cat that keeps trying to knock it
+            off the ledge.
           </p>
-        </section>
-
-        <!-- 3) SPATIAL AUDIO DESIGN -->
-        <section class="post-section">
-          <h2 class="post-heading">SPATIAL AUDIO DESIGN</h2>
           <p>
-            <!-- TODO: Did you use FMOD's 3D spatializer? Custom positioning rules?
-                 How did you handle distance attenuation curves so things didn't
-                 feel too close or too dead? Any reverb zones for different parts
-                 of the scene? -->
-            Every meaningful sound in the scene was placed in 3D space using
-            FMOD's spatializer. I tuned distance attenuation so [BEHAVIOUR: close
-            objects feel intimate, distant ones still readable], and used reverb
-            zones to give different parts of the world their own acoustic
-            identity. The result is that players can roughly tell where they are
-            with their eyes closed.
+            We made it as team Bird Throwers, seven people working across design,
+            art, and engineering. It leans into "try not to fall": the height, the
+            wobble, and the sound all push the player to second-guess every step.
           </p>
 
-          <figure class="post-figure post-figure--placeholder">
-            <div class="post-image-placeholder">
-              <span class="post-image-placeholder-label">[ FMOD/Unity screenshot ]</span>
-              <span class="post-image-placeholder-desc">A Unity scene view with audio emitters visible, or an FMOD event with the spatializer effect.</span>
-              <span class="post-image-placeholder-path">assets/blog/vertigato-spatial.jpg</span>
-            </div>
-            <figcaption>Caption goes here.</figcaption>
+          <figure class="post-figure">
+            <img src="../assets/blog/vertigato-scene.jpg" alt="In-game VR scene: the cat mascot stands on a rooftop next to a welcome panel reading Welcome to Vertigato, where players choose between two minigames." />
+            <figcaption>In-game: players are welcomed onto the rooftop and pick one of the two minigames.</figcaption>
           </figure>
         </section>
 
-        <!-- 4) DESIGNING FOR FIRST-TIME VR USERS -->
+        <!-- 2) MY ROLE -->
         <section class="post-section">
-          <h2 class="post-heading">DESIGNING FOR FIRST-TIME VR USERS</h2>
+          <h2 class="post-heading">MY ROLE</h2>
           <p>
-            <!-- TODO: This is your audience-specific insight. How did you avoid
-                 sensory overload? Volume ceilings, fewer simultaneous sounds,
-                 calmer ambient bed? Did you A/B test with anyone who'd never
-                 played VR before? -->
-            Designing for someone trying VR for the first time meant pulling back.
-            I [LIMITED SIMULTANEOUS SOUNDS / KEPT AMBIENCE LOW / AVOIDED HEAD-SPACE
-            STARTLES] so newcomers wouldn't get overwhelmed. The audio acts as a
-            soft handhold rather than a stimulation source.
+            I worked as a designer with a wide remit. On the art side I drew
+            concept art and the skybox, and implemented the skybox in Unity. On the
+            audio side I owned the whole soundscape: I composed the original
+            background music and the wind ambience, collected and edited the rest
+            of the sound effects, and scripted the audio into the game. I also put
+            together the team's presentation.
+          </p>
+          <p>
+            Worth being honest about the credits: nearly every sound effect in
+            Vertigato was sourced and then edited, but the background music and the
+            wind ambience are original pieces I wrote for the project.
           </p>
         </section>
 
-        <!-- 5) IMPLEMENTATION -->
+        <!-- 3) CONCEPT ART & SKYBOX -->
         <section class="post-section">
-          <h2 class="post-heading">IMPLEMENTATION: FMOD + UNITY</h2>
+          <h2 class="post-heading">CONCEPT ART &amp; SKYBOX</h2>
           <p>
-            <!-- TODO: How did audio get triggered? Trigger volumes, gaze-based
-                 events, hand-tracking interactions? Any C# scripting worth calling
-                 out? -->
-            Audio is triggered through [METHOD: Unity collider triggers, gaze
-            events, controller interactions], with FMOD events fired from C#.
-            [SPECIFIC TECHNICAL CHALLENGE: e.g. handling occlusion when the
-            player walks behind objects, or tying ambience to scene transitions].
+            Before any audio, I helped set the look. The concept art worked out how
+            the rooftops and the surrounding buildings should sit around the player,
+            and the skybox gives the world its bright, exposed, high-up feeling.
+            Getting that sky right mattered for the fear-of-heights idea: an open,
+            cloudy sky on every side makes the drop feel real once you look out.
           </p>
+
+          <div class="post-gallery">
+            <figure class="post-figure">
+              <img src="../assets/blog/vertigato-concept.jpg" alt="Concept art of a tall glass Saxion building drawn for Vertigato." />
+              <figcaption>Concept art for the setting.</figcaption>
+            </figure>
+            <figure class="post-figure">
+              <img src="../assets/blog/vertigato-skybox.jpg" alt="The bright blue skybox with scattered clouds drawn for Vertigato." />
+              <figcaption>The skybox I drew and implemented in Unity.</figcaption>
+            </figure>
+          </div>
         </section>
 
-        <!-- 6) WHAT I'D DO DIFFERENTLY -->
+        <!-- 4) MUSIC & SOUND -->
         <section class="post-section">
-          <h2 class="post-heading">WHAT I'D DO DIFFERENTLY</h2>
+          <h2 class="post-heading">MUSIC &amp; SOUND</h2>
           <p>
-            <!-- TODO: 1–2 things you'd change with hindsight, especially anything
-                 you only learned by watching open-day visitors actually play. -->
-            Watching open-day visitors play taught me [WHAT YOU OBSERVED]. Next
-            time I'd [SPECIFIC APPROACH] from the start, especially [WHY].
+            The original audio was written in Ableton Live. The background music
+            sets the mood without crowding the moment-to-moment play, and the wind
+            ambience is the constant reminder that you are somewhere high and
+            exposed. For the rest of the soundscape I collected source material,
+            edited it to fit, and scripted it into Unity so the right sound fires
+            on the right action.
           </p>
+
+          <figure class="post-figure">
+            <img src="../assets/blog/vertigato-ableton.jpg" alt="An Ableton Live session used to compose the background music and wind ambience for Vertigato." />
+            <figcaption>Writing the background music and wind ambience in Ableton Live.</figcaption>
+          </figure>
+        </section>
+
+        <!-- 5) SOUND IN THE WORLD -->
+        <section class="post-section">
+          <h2 class="post-heading">SOUND IN THE WORLD</h2>
+          <p>
+            Because this is VR, placement is everything. Players turn their heads
+            and lean over edges, so sounds have to come from the right point in
+            space to feel real. I placed audio emitters throughout the level, on
+            the glass panels, the rooftops, and around the bird nest, so the
+            soundscape stays anchored to the world as the player moves and looks
+            around.
+          </p>
+
+          <div class="post-gallery">
+            <figure class="post-figure">
+              <img src="../assets/blog/vertigato-emitters.jpg" alt="Unity scene view showing audio emitter icons placed across a glass panel high above a city." />
+              <figcaption>Audio emitters placed across the glass-panel minigame.</figcaption>
+            </figure>
+            <figure class="post-figure">
+              <img src="../assets/blog/vertigato-rooftops.jpg" alt="Unity scene view of the rooftop minigame with audio emitters near a bird nest on a ledge." />
+              <figcaption>Emitters around the rooftops and the bird nest.</figcaption>
+            </figure>
+          </div>
         </section>
 
         <!-- BACK LINK -->

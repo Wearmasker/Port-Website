@@ -106,7 +106,14 @@
         <section class="post-section">
           <figure class="post-figure">
             <img src="../assets/blog/feast-cover.jpg" alt="The classical painting The Feast of the Gods: divine figures gathered around a long banquet table beneath a stormy sky, the source artwork the VR experience is built from." />
-            <figcaption>The source artwork the experience is built from — a grand feast of divine beings, reimagined as a VR theatre piece.</figcaption>
+            <figcaption>The source artwork the experience is built from, a grand feast of divine beings, reimagined as a VR theatre piece.</figcaption>
+          </figure>
+
+          <figure class="post-figure">
+            <div class="post-video-embed">
+              <iframe src="https://drive.google.com/file/d/1S7RUQvU2YpWLzaU_4B1fi6zs_7XyM_hC/preview" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <figcaption>The Feast of the Gods: walkthrough video.</figcaption>
           </figure>
         </section>
 
@@ -122,7 +129,7 @@
           </p>
           <p>
             This was my graduation project, and my contribution was the entire audio side:
-            the sound design and the interactive audio system. The problem was concrete —
+            the sound design and the interactive audio system. The problem was concrete:
             the piece had no structured sound yet, and without believable, reactive audio a VR
             world quickly feels static and artificial. My job was to design, build, and evaluate
             an audio system that carries spatial presence, narrative cues, and physical sensation
@@ -140,7 +147,7 @@
             three audio layers: an environmental ambience that stays locked to the world,
             diegetic events that belong to the story, and interactive triggers that fire on the
             audience's actions. What set this installation apart from an ordinary VR build was a
-            physical one — a rumble plate beneath the audience, so the sound is felt as well as
+            physical one: a rumble plate beneath the audience, so the sound is felt as well as
             heard.
           </p>
 
@@ -154,7 +161,7 @@
         <section class="post-section">
           <h2 class="post-heading">APPROACH</h2>
           <p>
-            I structured the work around the Double Diamond — Discover, Define, Develop, Deliver.
+            I structured the work around the Double Diamond: Discover, Define, Develop, Deliver.
             The Discover phase was a literature review on VR audio and presence, which gave me a
             set of principles to build on: HRTF-based binaural rendering for every positioned
             source, a world-locked ambient layer, distance attenuation, occlusion and reverb
@@ -199,7 +206,7 @@
             That foundation worked, but it hit a wall: the Unreal FMOD plugin runs a single Studio
             System, which blocks per-event routing to a separate hardware device. There was no clean
             way to peel the rumble off to its own output. After confirming the limit, I migrated the
-            entire project to Wwise — recreating events and routing from scratch — because Wwise
+            entire project to Wwise (recreating events and routing from scratch) because Wwise
             supports multiple Audio Devices. A small Blueprint-callable C++ listener class assigns a
             secondary output device, so plate-bound sounds are heard only by that endpoint. The result:
             spatial audio stays on the headset while low-frequency rumble routes independently to the
@@ -209,7 +216,7 @@
 
           <figure class="post-figure">
             <img src="../assets/blog/feast-rumble-cage.jpg" alt="The Unreal editor showing rumble points placed beneath the audience cage, each setting a location and intensity for haptic feedback sent to the plate." />
-            <figcaption>Rumble points placed beneath the cage — each sets a location and intensity for the haptic feedback sent to the plate.</figcaption>
+            <figcaption>Rumble points placed beneath the cage, each setting a location and intensity for the haptic feedback sent to the plate.</figcaption>
           </figure>
 
           <figure class="post-figure">
@@ -225,11 +232,11 @@
             I evaluated the system with five participants, most of them new to VR, using a
             post-experience presence questionnaire adapted from the IGroup Presence Questionnaire
             plus a short debrief. The headline result spoke to the hyper-reality claim directly:
-            the pairing of sound and physical sensation — "the combination of sound and physical
-            sensation made the experience feel more real" — scored highest at <strong>5.6 out of 7</strong>.
+            the pairing of sound and physical sensation ("the combination of sound and physical
+            sensation made the experience feel more real") scored highest at <strong>5.6 out of 7</strong>.
             The overall contribution of sound to immersion came in at <strong>5.8</strong>, atmosphere
             at 5.4, and directional/spatial perception at 5.0. The weakest and least consistent item
-            was attention guidance (4.8) — sound steering where to look worked strongly for most
+            was attention guidance (4.8): sound steering where to look worked strongly for most
             testers but not all, which fed a final mix pass. With only five participants these
             numbers are indicative rather than generalisable, but they point the same way: the
             multisensory coupling is the part that lands.
@@ -241,7 +248,7 @@
           <h2 class="post-heading">WHAT I TOOK FROM IT</h2>
           <p>
             The biggest lesson was a practical one about committing to tools. The architecture
-            became a hybrid by history, not by design — Wwise only entered the picture after FMOD's
+            became a hybrid by history, not by design. Wwise only entered the picture after FMOD's
             single-output limit surfaced mid-project, and the switch cost time an earlier feasibility
             check would have saved. I came away understanding middleware well enough to evaluate its
             limitations <em>before</em> committing, and having learned an entire new tool (Wwise) under
