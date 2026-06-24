@@ -62,7 +62,7 @@
       <div class="hero-content container">
         <span class="post-eyebrow">CASE STUDY · 2024</span>
         <h1>CANYON RACER</h1>
-        <p class="post-subtitle">Adaptive engine sound, lasers, and explosions for a futuristic mobile plane racer, built in FMOD + Unity.</p>
+        <p class="post-subtitle">A mobile plane racer built in Unity by a team of 7 over 6 weeks — where I wore three hats: sound designer, mechanic designer, and documentation lead.</p>
       </div>
     </section>
 
@@ -72,7 +72,7 @@
         <div class="post-meta-grid">
           <div class="post-meta-item">
             <span class="post-meta-label">Role</span>
-            <span class="post-meta-value">Sound Designer</span>
+            <span class="post-meta-value">Sound · Mechanic · Docs</span>
           </div>
           <div class="post-meta-item">
             <span class="post-meta-label">Engine</span>
@@ -87,12 +87,12 @@
             <span class="post-meta-value">Ableton Live</span>
           </div>
           <div class="post-meta-item">
-            <span class="post-meta-label">Format</span>
-            <span class="post-meta-value">Mobile Racing</span>
+            <span class="post-meta-label">Team</span>
+            <span class="post-meta-value">7 People · 6 Weeks</span>
           </div>
           <div class="post-meta-item">
-            <span class="post-meta-label">Year</span>
-            <span class="post-meta-value">2024</span>
+            <span class="post-meta-label">Format</span>
+            <span class="post-meta-value">Mobile Racing</span>
           </div>
         </div>
       </div>
@@ -102,116 +102,147 @@
     <article class="section post-body">
       <div class="container post-container">
 
-        <!-- 1) THE BRIEF -->
+        <!-- 1) THE PROJECT -->
         <section class="post-section">
-          <h2 class="post-heading">THE BRIEF</h2>
+          <h2 class="post-heading">THE PROJECT</h2>
           <p>
-            <!-- TODO: 2–3 sentences on the project. What's Canyon Racer about? Was
-                 it a class project, jam game, or longer team build? Who set the
-                 audio direction? -->
-            Canyon Racer is a futuristic plane racing game where players choose
-            between aircraft with different skills and stats, racing against AI
-            opponents and using obstacles and power-ups to their advantage. The
-            audio brief was straightforward: every plane needs to feel different,
-            every shot needs to feel impactful, and the mix needs to survive on
-            mobile speakers.
+            Canyon Racer is a mobile plane racing game where the player picks an
+            aircraft — each with its own skill set and stats — and races against
+            AI opponents through a desert canyon. The goal is simple: cross the
+            finish line first after two laps of the map. The twist is that the
+            track is alive. You can shoot the canyon's obstacles to open up
+            shortcuts, grab power-ups by flying through boost rings, and use your
+            plane's special ability to sabotage the planes around you.
+          </p>
+          <p>
+            It was a six-week build by a team of seven, made in Unity. I came onto
+            the project in three roles at once: I designed and implemented the
+            sound, designed and tested gameplay mechanics, and owned the team
+            documentation that kept everyone pointed in the same direction.
+          </p>
+
+          <figure class="post-figure">
+            <video src="../assets/blog/canyon-racer-gameplay.mp4" controls playsinline preload="metadata" poster="../assets/blog/canyon-racer-poster.jpg"></video>
+            <figcaption>Gameplay — two laps through the canyon, with power-up rings, obstacles, and plane abilities in play.</figcaption>
+          </figure>
+        </section>
+
+        <!-- 2) GAMEPLAY -->
+        <section class="post-section">
+          <h2 class="post-heading">GAMEPLAY</h2>
+          <p>
+            Players choose from three aircraft, and the choice matters. Each plane
+            trades off damage, shooting cooldown, top speed, and acceleration, and
+            each carries a unique Attack Boost ability on its own duration and
+            cooldown. The Medium Plane, for example, leans on a balanced stat line
+            and an Attack Boost that raises the damage it deals to other planes for
+            a short window — a deliberate, aggressive pick rather than a pure speed
+            build.
+          </p>
+          <p>
+            Racing is two laps around the canyon, but pure throttle won't win it.
+            The map is full of obstacles you can shoot to carve out shortcuts,
+            boost rings that hand you a power-up as you pass through, and openings
+            to sabotage rivals. The result is a racer where positioning, timing,
+            and aim matter as much as speed.
           </p>
 
           <figure class="post-figure post-figure--placeholder">
             <div class="post-image-placeholder">
               <span class="post-image-placeholder-label">[ Image placeholder ]</span>
-              <span class="post-image-placeholder-desc">In-game screenshot of Canyon Racer: a plane mid-race, ideally during combat.</span>
-              <span class="post-image-placeholder-path">assets/blog/canyon-racer-gameplay.jpg</span>
+              <span class="post-image-placeholder-desc">Plane-select screen showing the three aircraft and their stats / Attack Boost ability.</span>
+              <span class="post-image-placeholder-path">assets/blog/canyon-racer-select.jpg</span>
             </div>
-            <figcaption>Caption goes here.</figcaption>
+            <figcaption>The plane-select screen — each aircraft has its own stats and a unique Attack Boost.</figcaption>
           </figure>
         </section>
 
-        <!-- 2) THE APPROACH -->
+        <!-- 3) ROLES -->
         <section class="post-section">
-          <h2 class="post-heading">THE APPROACH</h2>
+          <h2 class="post-heading">MY ROLE</h2>
           <p>
-            <!-- TODO: What was your audio personality? Pure synth/sci-fi, or
-                 grounded with real engine textures? How did you balance "futuristic"
-                 with "readable" so players still got useful audio feedback? -->
-            For the futuristic feel I went mostly synth-driven (Serum patches and
-            heavy modulation) but anchored everything with real recorded textures
-            so the game still felt physical. Players needed to *feel* the speed
-            and *hear* the difference between planes within a second of switching.
+            The seven-person team broke down into two designers, three artists,
+            and two engineers. Within that, I covered three areas: sound design,
+            mechanic design, and documentation. Wearing several hats on a short
+            timeline meant I spent as much time keeping shared knowledge organised
+            and the design coherent as I did building audio — and the three roles
+            fed each other constantly.
           </p>
         </section>
 
-        <!-- 3) ENGINE SOUND -->
+        <!-- 4) SOUND DESIGN -->
         <section class="post-section">
-          <h2 class="post-heading">ADAPTIVE ENGINE SOUND</h2>
+          <h2 class="post-heading">SOUND DESIGN</h2>
           <p>
-            <!-- TODO: This is your most technically interesting section for this
-                 project. Walk through how you built the engine sounds. Did you use
-                 multiple layers (idle / mid / max throttle)? FMOD parameters driven
-                 by Unity's velocity? Cross-fading between RPM zones? -->
-            The engine sound is the audio centerpiece of any racer, so I built it
-            in FMOD with [N LAYERS: idle, low throttle, mid, max] crossfaded by an
-            RPM parameter driven from Unity. As the plane accelerates, [WHAT
-            CHANGES: pitch, volume, filter, timbre]. Different aircraft use
-            different layer sets so each plane has a distinct sonic identity.
+            On the audio side I handled the whole pipeline: collecting and
+            recording source material, building original sound effects in Ableton
+            Live, editing and shaping them, and scripting them into the game. The
+            brief I set for myself was simple — every plane should feel different,
+            every shot should feel impactful, and the whole mix needs to survive
+            on mobile speakers.
+          </p>
+          <p>
+            The sounds were authored in Ableton, then implemented through FMOD's
+            Unity integration so I could keep iterating on the audio without
+            round-tripping through an engineer. Engine tones, weapon fire,
+            explosions, power-up pickups, and the UI all run as FMOD events, with
+            pitch and timbre randomisation on the repeated sounds so consecutive
+            shots never feel mechanical. Small variations make a small library
+            feel much bigger.
           </p>
 
           <figure class="post-figure post-figure--placeholder">
             <div class="post-image-placeholder">
-              <span class="post-image-placeholder-label">[ FMOD screenshot ]</span>
-              <span class="post-image-placeholder-desc">FMOD Studio event view showing the engine event with its RPM parameter and crossfaded layers.</span>
-              <span class="post-image-placeholder-path">assets/blog/canyon-racer-fmod-engine.jpg</span>
+              <span class="post-image-placeholder-label">[ FMOD / Ableton screenshot ]</span>
+              <span class="post-image-placeholder-desc">FMOD event view or an Ableton session showing the SFX design — engine, lasers, or explosions.</span>
+              <span class="post-image-placeholder-path">assets/blog/canyon-racer-fmod.jpg</span>
             </div>
-            <figcaption>Caption goes here.</figcaption>
+            <figcaption>Authoring SFX in Ableton, implemented through FMOD in Unity.</figcaption>
           </figure>
         </section>
 
-        <!-- 4) LASERS, EXPLOSIONS, POWER-UPS -->
+        <!-- 5) MECHANIC DESIGN -->
         <section class="post-section">
-          <h2 class="post-heading">LASERS, EXPLOSIONS, POWER-UPS</h2>
+          <h2 class="post-heading">MECHANIC DESIGN</h2>
           <p>
-            <!-- TODO: How did you build the combat SFX? Layered design with Serum
-                 leads + noise bursts? Procedural variation in FMOD so the laser
-                 doesn't sound identical every shot? -->
-            Combat sounds were layered designs: a Serum-based [LEAD ELEMENT] for
-            character, a [NOISE / TRANSIENT LAYER] for impact, and a [TAIL
-            ELEMENT] for distance. In FMOD I used pitch and timbre randomisation
-            so consecutive shots don't sound mechanical. Small variations make a
-            small library feel much bigger.
+            As a mechanic designer I helped shape how the race actually plays.
+            Several games steered our direction. The power-up loop borrows from
+            Mario Kart — each aircraft has a unique ability, and flying through
+            rings grants a boost — which turns the track into something you read
+            and exploit rather than just drive around. We pulled camera ideas from
+            a handful of flight games so the player genuinely feels like they're
+            piloting an aircraft through the canyon, and we built a UI tuned for
+            playing on mobile.
+          </p>
+          <p>
+            My job was as much pressure-testing as inventing: prototyping ability
+            ideas, tuning the stat trade-offs between planes, and playtesting to
+            find where the obstacle-shortcut and sabotage systems felt fair versus
+            frustrating.
           </p>
 
           <figure class="post-figure post-figure--placeholder">
             <div class="post-image-placeholder">
               <span class="post-image-placeholder-label">[ Image placeholder ]</span>
-              <span class="post-image-placeholder-desc">A Serum patch screenshot or an Ableton session showing the laser/explosion design.</span>
-              <span class="post-image-placeholder-path">assets/blog/canyon-racer-serum.jpg</span>
+              <span class="post-image-placeholder-desc">Power-up rings, obstacles, and ability effects in the canyon — the mechanics in action.</span>
+              <span class="post-image-placeholder-path">assets/blog/canyon-racer-mechanics.jpg</span>
             </div>
-            <figcaption>Caption goes here.</figcaption>
+            <figcaption>Power-up rings, shootable obstacles, and plane abilities — the systems that make the track interactive.</figcaption>
           </figure>
         </section>
 
-        <!-- 5) IMPLEMENTATION -->
+        <!-- 6) DOCUMENTATION -->
         <section class="post-section">
-          <h2 class="post-heading">IMPLEMENTATION: FMOD + UNITY</h2>
+          <h2 class="post-heading">DOCUMENTATION &amp; TESTING</h2>
           <p>
-            <!-- TODO: How did the audio get into Unity? Per-plane FMOD emitters,
-                 or a centralized AudioManager? Which Unity events trigger which
-                 FMOD events? Any C# scripting worth mentioning? -->
-            All audio runs through FMOD's Unity integration. Each plane has its
-            own event emitter for engine and weapon sounds, and global events
-            (UI, music, ambience) are handled through [APPROACH: centralised
-            AudioManager / FMOD listener / etc.]. Unity's [VELOCITY / RIGIDBODY /
-            INPUT] feeds directly into FMOD parameters every frame.
-          </p>
-        </section>
-
-        <!-- 6) WHAT I'D DO DIFFERENTLY -->
-        <section class="post-section">
-          <h2 class="post-heading">WHAT I'D DO DIFFERENTLY</h2>
-          <p>
-            <!-- TODO: 1–2 things you'd change with hindsight. -->
-            With hindsight, [SPECIFIC THING you'd change] (because [why]). Next time I'd
-            [SPECIFIC APPROACH] from the start, especially because [REASON].
+            With seven people moving fast for six weeks, documentation was the glue.
+            I owned the design docs — capturing mechanics, stats, and decisions so
+            artists and engineers were building against the same source of truth —
+            and kept them current as the design changed. Paired with hands-on
+            testing, this is where the sound, mechanic, and documentation roles
+            came together: I could spot a problem in playtest, reason about the
+            fix as a designer, and write it down clearly enough for the team to act
+            on.
           </p>
         </section>
 
