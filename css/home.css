@@ -230,6 +230,11 @@
   /*background: #000;*/
 }
 
+.home-links-intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
 .home-links-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
