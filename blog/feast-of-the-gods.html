@@ -258,6 +258,25 @@
           </p>
         </section>
 
+        <!-- HOW I MADE IT -->
+        <section class="post-section">
+          <h2 class="post-heading">HOW I MADE IT</h2>
+          <p>The project followed a Double Diamond, four phases that took it from research to a tested build:</p>
+          <ul class="post-list">
+            <li>Discover: a literature review on VR audio and presence, which produced a shortlist of techniques worth prototyping, including HRTF binaural rendering, world-locked ambience, distance attenuation, occlusion, and diegetic placement.</li>
+            <li>Define: turned the narrative brief and the physical setup into a stakeholder-approved requirements list, tracked in a colour-coded master sheet that doubled as a build tracker.</li>
+            <li>Develop: built the audio in iterations, starting with a data-table-driven audio manager in Unreal with FMOD, then the rumble-plate integration.</li>
+            <li>Hit FMOD's limit: its single Studio System blocked per-event routing to a separate hardware device, so I migrated the whole project to Wwise and rebuilt the events and routing.</li>
+            <li>Solved the dual output: a Blueprint-callable C++ listener assigns a secondary Wwise device, so spatial audio goes to the headset and low-frequency rumble routes to the plate, with rumble points placed per scene in Unreal.</li>
+            <li>Deliver: user-tested with five participants using a presence questionnaire, then did a final mix pass based on the results.</li>
+          </ul>
+
+          <figure class="post-figure">
+            <img src="../assets/blog/feast-diamond.jpg" alt="The Double Diamond design process diagram, showing the four phases: Discover, Define, Develop, and Deliver." />
+            <figcaption>The Double Diamond framework I structured the project around. (Diagram: The Design Council, CC BY 4.0.)</figcaption>
+          </figure>
+        </section>
+
         <!-- BACK LINK -->
         <div class="post-back">
           <a href="../blog.html">← Back to all posts</a>

@@ -266,6 +266,25 @@
         </section>
         -->
 
+        <!-- HOW I MADE IT -->
+        <section class="post-section">
+          <h2 class="post-heading">HOW I MADE IT</h2>
+          <p>How the audio identity and the levels came together on this build:</p>
+          <ul class="post-list">
+            <li>Built all the SFX and music in Ableton Live, from recorded sources and Serum synthesis.</li>
+            <li>Set up per-world music that swaps on a Worlds parameter in FMOD (Basic, WhatsApp, Instagram, Scam) so the score follows the player without a hard cut.</li>
+            <li>Layered and processed the SFX for player, UI, enemies, and environment, adding pitch and timbre variation so repeats never sound mechanical.</li>
+            <li>Implemented all audio through FMOD and Unity, with event logic, parameters, and a centralized AudioManager to keep integration and iteration fast.</li>
+            <li>Designed 24 level layouts across the themed worlds, greyboxing each one and then wiring the audio straight to the triggers.</li>
+            <li>Tuned everything for the target audience, keeping sounds unambiguous and the music supportive rather than overwhelming.</li>
+          </ul>
+
+          <figure class="post-figure">
+            <img src="../assets/blog/viral-impact-process.jpg" alt="A Viral Impact level open in the Unity editor during greyboxing, with the level asset list visible." />
+            <figcaption>Greyboxing one of the level layouts in the editor before wiring in the audio.</figcaption>
+          </figure>
+        </section>
+
         <!-- BACK LINK -->
         <div class="post-back">
           <a href="../blog.html">← Back to all posts</a>
