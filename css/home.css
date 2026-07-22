@@ -33,19 +33,26 @@
 
 .reel-link {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .reel-link a {
-  font-size: 13px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #f5a623;
   text-decoration: none;
+  border: 2px solid #f5a623;
+  border-radius: 6px;
+  padding: 16px 36px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .reel-link a:hover {
-  color: #fff;
+  background: #f5a623;
+  color: #111;
 }
 
 #reel .embed {
