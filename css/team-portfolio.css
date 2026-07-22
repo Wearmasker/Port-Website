@@ -107,6 +107,29 @@
   border-bottom-color: #f5a623;
 }
 
+/* "Read the full breakdown" turned into a button */
+.personal-text a[href^="blog/"] {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #111;
+  background: #f5a623;
+  border: 2px solid #f5a623;
+  border-bottom: 2px solid #f5a623;
+  border-radius: 6px;
+  padding: 14px 34px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.personal-text a[href^="blog/"]:hover {
+  background: transparent;
+  color: #f5a623;
+  border-bottom-color: #f5a623;
+}
+
 /* video rộng vừa và căn giữa */
 .personal-embed {
   max-width: 960px;

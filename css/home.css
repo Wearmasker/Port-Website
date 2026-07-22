@@ -39,20 +39,21 @@
 .reel-link a {
   display: inline-block;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #f5a623;
+  color: #111;
+  background: #f5a623;
   text-decoration: none;
   border: 2px solid #f5a623;
   border-radius: 6px;
-  padding: 16px 36px;
+  padding: 16px 40px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .reel-link a:hover {
-  background: #f5a623;
-  color: #111;
+  background: transparent;
+  color: #f5a623;
 }
 
 #reel .embed {
