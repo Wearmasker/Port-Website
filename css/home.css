@@ -23,6 +23,31 @@
   margin-bottom: 32px;
 }
 
+.reel-subheading {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 48px 0 16px;
+}
+
+.reel-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.reel-link a {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5a623;
+  text-decoration: none;
+}
+
+.reel-link a:hover {
+  color: #fff;
+}
+
 #reel .embed {
   max-width: 960px;
   margin: 0 auto;
